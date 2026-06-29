@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Valentine Duflot — Architecte d'intérieur & rénovation haut de gamme à Nice</title>
+<meta name="description" content="Valentine Duflot, architecte d'intérieur à Nice. Conception, aménagement et rénovation haut de gamme d'appartements, maisons et villas — France, Belgique, Suisse." />
+<meta name="author" content="Valentine Duflot" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0b0b0d" />
+<link rel="canonical" href="https://valentineduflot.fr/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:site_name" content="Valentine Duflot" />
+<meta property="og:title" content="Valentine Duflot — Architecte d'intérieur & rénovation à Nice" />
+<meta property="og:description" content="Conception, aménagement et rénovation haut de gamme. Du premier croquis à la finition, un intérieur qui vous ressemble." />
+<meta property="og:url" content="https://valentineduflot.fr/" />
+<meta property="og:image" content="https://valentineduflot.fr/gallery1.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Valentine Duflot — Architecte d'intérieur à Nice" />
+<meta name="twitter:description" content="Rénovation et architecture d'intérieur haut de gamme — Nice, France." />
+<meta name="twitter:image" content="https://valentineduflot.fr/gallery1.jpg" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23141414'/%3E%3Crect x='3' y='7' width='3.4' height='10' rx='1.7' fill='%23fff'/%3E%3Crect x='10.3' y='4' width='3.4' height='13' rx='1.7' fill='%23fff'/%3E%3Crect x='17.6' y='9' width='3.4' height='8' rx='1.7' fill='%23fff'/%3E%3C/svg%3E" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "InteriorDesignBusiness",
+  "name": "Valentine Duflot — Architecte d'intérieur",
+  "description": "Architecte d'intérieur à Nice. Conception, aménagement et rénovation haut de gamme en France, Belgique et Suisse.",
+  "image": "https://valentineduflot.fr/gallery1.jpg",
+  "url": "https://valentineduflot.fr/",
+  "telephone": "+33761551586",
+  "email": "contact@valentineduflot.fr",
+  "priceRange": "€€€",
+  "areaServed": ["France", "Belgique", "Suisse"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "22 Rue Cassini",
+    "postalCode": "06300",
+    "addressLocality": "Nice",
+    "addressCountry": "FR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 43.6961, "longitude": 7.2861 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "09:00",
+    "closes": "17:00"
+  }]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,600;1,700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background: #010101; color: #fff; }
+
+/* Lenis smooth-scroll (makes the whole page glide) */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+
+.fixed { position: fixed; }
+.absolute { position: absolute; }
+.relative { position: relative; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+
+/* Scroll Video */
+#scroll-video-container {
+  position: fixed; inset: 0; z-index: -10;
+  background: #0a0a0a;
+}
+#scroll-video-container canvas,
+#scroll-video-container video {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+}
+/* Overlay kept transparent so the video shows at 100% opacity, exactly like the original */
+#scroll-video-container .overlay { position: absolute; inset: 0; background: transparent; }
+
+/* Particles */
+#particles-canvas {
+  position: fixed; inset: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 3;
+}
+
+/* Nav */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 2.5rem;
+}
+nav .logo { font-weight: 700; font-size: 1.25rem; color: #fff; letter-spacing: -0.025em; }
+nav .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+nav .nav-links a { font-size: 0.875rem; color: #d1d5db; text-decoration: none; transition: color 0.2s; }
+nav .nav-links a:hover { color: #fff; }
+nav .social { display: flex; align-items: center; gap: 1rem; }
+nav .social a { color: #d1d5db; transition: color 0.2s; }
+nav .social a:hover { color: #fff; }
+nav .social svg { width: 1.25rem; height: 1.25rem; }
+
+/* Cards */
+#fixed-cards {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 4;
+  padding: 2rem 2.5rem; opacity: 0; pointer-events: none;
+}
+#fixed-cards .grid {
+  max-width: 72rem; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr auto; gap: 2.5rem; align-items: end;
+}
+#fixed-cards .card h3 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+#fixed-cards .card p { color: #d1d5db; font-size: 0.875rem; line-height: 1.6; }
+
+/* Reveal-deck content (replaces the old Veldara cards) — the picture-1 info row */
+.deck-col { display: flex; flex-direction: column; justify-content: flex-end; }
+.deck-tagline { font-size: clamp(1.5rem, 2.4vw, 2.25rem); font-weight: 800; line-height: 1.0; letter-spacing: -0.01em; margin: 0 0 1.5rem; color: #fff; }
+.deck-cta { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.deck-copy { font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.92); max-width: 34ch; margin: 0; }
+/* Stats now live inside a frosted transparent glass card */
+.deck-stats {
+  flex-direction: row; gap: 2.25rem; align-items: flex-end; justify-content: flex-end;
+  padding: 1.6rem 2rem;
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 50px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.30);
+}
+.deck-fact { display: flex; flex-direction: column; }
+.deck-fact-k { font-size: clamp(1.6rem, 2.2vw, 2.15rem); font-weight: 700; line-height: 1.05; color: #fff; }
+.deck-fact-v { font-size: 0.82rem; font-weight: 700; color: rgba(255,255,255,0.95); margin-top: 0.35rem; letter-spacing: 0.01em; }
+@media (max-width: 768px) {
+  /* Stack the three stats one per row inside the glass card — cleaner on phones */
+  .deck-stats {
+    flex-direction: column; align-items: flex-start; gap: 1.1rem;
+    justify-self: start; width: auto; padding: 1.4rem 1.6rem;
+  }
+  .deck-fact { flex-direction: row; align-items: baseline; gap: 0.6rem; }
+  .deck-fact-v { margin-top: 0; }
+  #fixed-cards .grid, #fixed-cards-2 .grid { grid-template-columns: 1fr; gap: 1.5rem; align-items: start; }
+}
+
+/* Section 3 */
+#section-three {
+  position: relative; min-height: 100vh; display: flex; align-items: flex-end;
+  justify-content: center; padding: 0 2.5rem 8rem;
+}
+#section-three .inner {
+  position: relative; z-index: 10; display: flex; flex-direction: column;
+  align-items: center; text-align: center;
+  opacity: 0; transform: translateY(32px); filter: blur(8px);
+  transition: opacity 1s ease-out, transform 1s ease-out, filter 1s ease-out;
+}
+#section-three .inner.visible { opacity: 1; transform: translateY(0); filter: blur(0); }
+#section-three .inner p { color: #d1d5db; font-size: 1rem; margin-bottom: 0.75rem; }
+#section-three .inner h2 { font-size: clamp(1.875rem, 6vw, 4.5rem); font-weight: 700; }
+
+/* Content wrapper */
+#content { position: relative; z-index: 2; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav { padding: 1rem 1.5rem; }
+  nav .nav-links { display: none; }
+  #fixed-cards .grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  #fixed-cards { padding: 1.5rem 1rem; }
+  #section-three { padding-bottom: 5rem; }
+}
+
+/* ============================================================
+   PART 2 — a second scroll-video section that begins right
+   after the "Veldara 8" frame. Mirrors part 1, new video.
+   ============================================================ */
+#scroll-video-container-2 {
+  position: fixed; inset: 0; z-index: -9;
+  background: #0a0a0a;
+  opacity: 0; /* opacity is driven by scroll for a seamless crossfade */
+}
+#scroll-video-container-2 canvas,
+#scroll-video-container-2 video {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+}
+#scroll-video-container-2 .overlay { position: absolute; inset: 0; background: transparent; }
+
+#fixed-cards-2 {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 4;
+  padding: 2rem 2.5rem; opacity: 0; pointer-events: none;
+}
+#fixed-cards-2 .grid {
+  max-width: 72rem; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr auto; gap: 2.5rem; align-items: end;
+}
+#fixed-cards-2 .card h3 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+#fixed-cards-2 .card p { color: #d1d5db; font-size: 0.875rem; line-height: 1.6; }
+
+#section-three-2 {
+  position: relative; min-height: 100vh; display: flex; align-items: flex-end;
+  justify-content: center; padding: 0 2.5rem 8rem;
+}
+#section-three-2 .inner {
+  position: relative; z-index: 10; display: flex; flex-direction: column;
+  align-items: center; text-align: center;
+  opacity: 0; transform: translateY(32px); filter: blur(8px);
+  transition: opacity 1s ease-out, transform 1s ease-out, filter 1s ease-out;
+}
+#section-three-2 .inner.visible { opacity: 1; transform: translateY(0); filter: blur(0); }
+#section-three-2 .inner p { color: #d1d5db; font-size: 1rem; margin-bottom: 0.75rem; }
+#section-three-2 .inner h2 { font-size: clamp(1.875rem, 6vw, 4.5rem); font-weight: 700; }
+
+#content2 { position: relative; z-index: 2; }
+
+@media (max-width: 768px) {
+  #fixed-cards-2 .grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  #fixed-cards-2 { padding: 1.5rem 1rem; }
+  #section-three-2 { padding-bottom: 5rem; }
+}
+
+/* ============================================================
+   HERO — architecture-style landing over block 1's video.
+   The brand name sits UNDER a re-drawn copy of the same video
+   frame (masked to its lower half), so the house occludes the
+   bottom of the letters — the "behind the house" depth effect.
+   ============================================================ */
+::selection { background: #EAECE9; color: #1C2E1E; }
+
+@keyframes heroDropIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Nav brand mark */
+nav .brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: #fff; }
+nav .brand-mark { width: 1.4rem; height: 1.4rem; color: #fff; }
+nav .brand-name { font-weight: 700; font-size: 1rem; letter-spacing: -0.01em; color: #fff; }
+
+#hero { position: fixed; inset: 0; z-index: 6; color: #fff; pointer-events: none; }
+#hero .hero-wrap { width: 100%; max-width: 80rem; margin: 0 auto; padding: 0 2.5rem; }
+
+/* (1) the brand name */
+#hero .hero-title-layer { position: absolute; inset: 0; z-index: 1; display: flex; align-items: flex-start; }
+#hero .hero-title-layer .hero-wrap { padding-top: 9vh; }
+#hero .vd-name { line-height: 0.82; }
+#hero .vd-line {
+  font-family: 'Chakra Petch', sans-serif; font-style: italic; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.01em;
+  font-size: clamp(2.5rem, 14vw, 11rem);
+  color: #fff; margin: 0; display: block;
+}
+/* VALENTINE rises out from behind the house as you scroll: its lower part is
+   clipped at the "roofline", so the letters read as standing behind the building
+   and emerge upward with the scroll motion. */
+#hero .vd-valentine { overflow: hidden; padding-top: 0.12em; }
+#hero .vd-valentine .vd-in {
+  display: inline-block; transform: translateY(80%); will-change: transform;
+}
+/* DUFLOT stays fully visible, in front of the scene. */
+#hero .vd-duflot {
+  text-shadow: 0 6px 34px rgba(0,0,0,0.42);
+  opacity: 0; transform: translateY(28px);
+  animation: heroDropIn 0.85s cubic-bezier(.22,1,.36,1) 0.25s forwards;
+}
+
+/* (3) legibility scrims */
+#hero .hero-scrim {
+  position: absolute; inset: 0; z-index: 3;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 18%),
+    linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 40%);
+}
+
+/* (4) bottom UI row — always on top */
+#hero .hero-ui { position: absolute; inset: 0; z-index: 4; display: flex; align-items: flex-end; }
+#hero .hero-ui .hero-wrap { padding-bottom: 2.75rem; }
+#hero .hero-bottom {
+  opacity: 0; transform: translateY(20px);
+  animation: heroDropIn 0.7s ease-out 0.3s forwards;
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2.5rem; align-items: end;
+}
+#hero .hero-tagline {
+  font-size: clamp(1.5rem, 2.4vw, 2.25rem); font-weight: 800;
+  line-height: 1.0; letter-spacing: -0.01em; margin: 0 0 1.5rem;
+}
+#hero .hero-cta { display: flex; gap: 0.75rem; flex-wrap: wrap; pointer-events: auto; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.85rem 1.6rem; border-radius: 999px;
+  font-size: 0.875rem; font-weight: 600; text-decoration: none;
+  transition: all 0.2s ease; white-space: nowrap; cursor: pointer;
+}
+.btn-solid { background: #fff; color: #111; }
+.btn-solid:hover { background: rgba(255,255,255,0.82); }
+.btn-ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.6); }
+.btn-ghost:hover { background: rgba(255,255,255,0.14); }
+#hero .hero-copy { font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.92); max-width: 34ch; margin: 0; }
+#hero .hero-col-right { display: flex; gap: 2rem; justify-content: flex-end; }
+#hero .hero-fact { display: flex; flex-direction: column; }
+#hero .hero-fact-k { font-size: clamp(1.25rem, 1.8vw, 1.7rem); font-weight: 800; line-height: 1.1; }
+#hero .hero-fact-v { font-size: 0.8rem; color: rgba(255,255,255,0.82); margin-top: 0.3rem; }
+
+@media (max-width: 900px) {
+  #hero .hero-wrap { padding: 0 1.5rem; }
+  #hero .hero-title-layer .hero-wrap { padding-top: 17vh; }
+  #hero .hero-title { font-size: clamp(2.75rem, 18vw, 6rem); }
+  #hero #hero-fg {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 48%, #000 64%, #000 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, transparent 48%, #000 64%, #000 100%);
+  }
+  #hero .hero-ui .hero-wrap { padding-bottom: 1.5rem; }
+  #hero .hero-bottom { grid-template-columns: 1fr; gap: 1.1rem; }
+  #hero .hero-tagline { font-size: 1.4rem; margin-bottom: 1rem; }
+  #hero .hero-copy { font-size: 0.85rem; }
+  #hero .hero-col-right { justify-content: flex-start; flex-wrap: wrap; gap: 1.25rem; }
+}
+
+/* ============================================================
+   PREMIUM TYPE SYSTEM
+   Display: Fraunces (optical serif, editorial / luxury)
+   Body:    Plus Jakarta Sans
+   Logotype name keeps Chakra Petch. Overrides the generic
+   defaults so the studio reads high-end, not template.
+   ============================================================ */
+.deck-tagline {
+  font-family: 'Fraunces', serif; font-optical-sizing: auto;
+  font-weight: 600; font-style: italic; text-transform: none;
+  letter-spacing: -0.015em; line-height: 1.02;
+}
+.deck-fact-k {
+  font-family: 'Fraunces', serif; font-optical-sizing: auto; font-weight: 700;
+}
+#section-three .inner h2, #section-three-2 .inner h2 {
+  font-family: 'Fraunces', serif; font-optical-sizing: auto;
+  font-weight: 600; letter-spacing: -0.015em;
+}
+#section-three .inner p, #section-three-2 .inner p {
+  text-transform: uppercase; letter-spacing: 0.32em;
+  font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.85);
+}
+.deck-copy, .deck-fact-v, nav .nav-links a, nav .brand-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ============================================================
+   SCROLL CUE — the understated "Scroll" prompt seen on premium
+   landing pages. Bottom-center, fades out once the user scrolls.
+   ============================================================ */
+#scroll-cue {
+  position: fixed; bottom: 1.9rem; left: 50%; transform: translateX(-50%);
+  z-index: 45; display: flex; flex-direction: column; align-items: center; gap: 0.7rem;
+  pointer-events: none; will-change: opacity;
+}
+.scroll-cue-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  text-transform: uppercase; letter-spacing: 0.42em; font-size: 0.68rem; font-weight: 600;
+  color: rgba(255,255,255,0.9); padding-left: 0.42em;
+}
+.scroll-cue-track {
+  position: relative; width: 1px; height: 48px;
+  background: rgba(255,255,255,0.28); overflow: hidden;
+}
+.scroll-cue-dot {
+  position: absolute; left: 50%; top: 0; width: 3px; height: 11px; border-radius: 2px;
+  background: #fff; transform: translate(-50%, -14px);
+  animation: scrollCue 1.9s cubic-bezier(.76,0,.24,1) infinite;
+}
+@keyframes scrollCue {
+  0%   { transform: translate(-50%, -14px); opacity: 0; }
+  25%  { opacity: 1; }
+  75%  { opacity: 1; }
+  100% { transform: translate(-50%, 48px); opacity: 0; }
+}
+
+/* ============================================================
+   PILLNAV — pill-shaped navigation with the "rising circle"
+   hover (GSAP). Vanilla port of the React/Tailwind component.
+   ============================================================ */
+.pillnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding: 1.1rem 2rem;
+  --base: #141414; --pill-bg: #f7f6f3; --pill-text: #141414; --hover-text: #ffffff;
+  --nav-h: 48px;
+}
+.pillnav-left { display: flex; align-items: center; gap: 0.85rem; }
+.pillnav-logo {
+  width: var(--nav-h); height: var(--nav-h); border-radius: 999px;
+  background: var(--base); color: var(--pill-bg);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; overflow: hidden; text-decoration: none;
+}
+.pillnav-logo svg { width: 1.35rem; height: 1.35rem; }
+.pillnav-wordmark {
+  color: #fff; font-weight: 700; font-size: 1rem; letter-spacing: -0.01em;
+  font-family: 'Plus Jakarta Sans', sans-serif; white-space: nowrap;
+  text-shadow: 0 1px 12px rgba(0,0,0,0.4);
+}
+.pillnav-pills { display: flex; align-items: center; height: var(--nav-h); background: var(--base); border-radius: 999px; padding: 0 6px; }
+.pillnav-pills ul { list-style: none; display: flex; align-items: stretch; gap: 6px; height: 100%; margin: 0; padding: 0; }
+.pillnav-pills li { display: flex; align-items: center; }
+.pill {
+  position: relative; overflow: hidden; display: inline-flex; align-items: center; justify-content: center;
+  height: calc(var(--nav-h) - 12px); padding: 0 20px; border-radius: 999px;
+  background: var(--pill-bg); color: var(--pill-text); text-decoration: none;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 0.78rem;
+  text-transform: uppercase; letter-spacing: 0.09em; cursor: pointer; white-space: nowrap;
+}
+.pill .hover-circle { position: absolute; left: 50%; bottom: 0; border-radius: 50%; background: var(--base); z-index: 1; display: block; pointer-events: none; }
+.pill .label-stack { position: relative; display: inline-block; line-height: 1; z-index: 2; overflow: hidden; padding: 4px 0; }
+.pill .pill-label { position: relative; z-index: 2; display: inline-block; will-change: transform; }
+.pill .pill-label-hover { position: absolute; left: 0; top: 4px; z-index: 3; display: inline-block; width: 100%; text-align: center; color: var(--hover-text); will-change: transform, opacity; }
+.pill.is-active::after { content: ''; position: absolute; left: 50%; bottom: 3px; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background: var(--base); z-index: 4; }
+.pillnav-burger { display: none; width: var(--nav-h); height: var(--nav-h); border-radius: 999px; background: var(--base); color: var(--pill-bg); border: 0; align-items: center; justify-content: center; cursor: pointer; }
+.pillnav-burger svg { width: 1.25rem; height: 1.25rem; }
+.pillnav-mobile {
+  display: none; position: fixed; top: 4.5rem; left: 1rem; right: 1rem; z-index: 999;
+  background: #141414; border-radius: 1rem; overflow: hidden; box-shadow: 0 24px 70px rgba(0,0,0,0.45);
+}
+.pillnav-mobile ul { list-style: none; margin: 0; padding: 0.5rem; display: flex; flex-direction: column; gap: 0.25rem; }
+.pillnav-mobile a {
+  display: block; padding: 0.85rem 1.25rem; border-radius: 0.75rem;
+  color: rgba(255,255,255,0.72); text-decoration: none; font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.14em; transition: all 0.2s ease;
+}
+.pillnav-mobile a:hover, .pillnav-mobile a.is-active { background: rgba(255,255,255,0.10); color: #fff; }
+@media (max-width: 820px) {
+  .pillnav { padding: 0.9rem 1.25rem; }
+  .pillnav-pills { display: none; }
+  .pillnav-burger { display: flex; }
+  .pillnav-wordmark { display: none; }
+}
+
+/* ============================================================
+   ABOUT US — 4 liquid-glass cards (user-provided glass CSS),
+   revealed one-by-one from the right and the left, over the
+   block-1 scrolling video, after the numbers disappear.
+   ============================================================ */
+#aboutus { position: fixed; inset: 0; z-index: 6; pointer-events: none; opacity: 0; visibility: hidden; }
+.au-stage { position: absolute; inset: 0; }
+.au-deck { position: absolute; inset: 0; }
+
+/* "About us" — slides in from the left and stays */
+.au-title {
+  position: absolute; left: 6%; top: clamp(3.5rem, 7.5vh, 6rem); margin: 0; z-index: 5;
+  font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400;
+  font-size: clamp(2.2rem, 4.8vw, 4.1rem); line-height: 0.96; letter-spacing: -0.005em;
+  color: #fff;
+  /* Thicken the thin serif strokes + heavy shadow so the title reads clearly */
+  -webkit-text-stroke: 0.8px #fff; paint-order: stroke fill;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.6), 0 8px 44px rgba(0,0,0,0.9);
+  opacity: 0; will-change: opacity, transform;
+}
+
+/* Cards: a pair on the LEFT, a pair on the RIGHT — never crossing the centre */
+#aboutus .au-card {
+  position: absolute; width: min(36vw, 380px);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 2rem 2rem; border-radius: 22px; opacity: 0; will-change: opacity, transform;
+}
+#aboutus .au-card[data-i="0"] { left: 5%;  top: 50%; }
+#aboutus .au-card[data-i="1"] { left: 5%;  top: 80%; }
+#aboutus .au-card[data-i="2"] { right: 5%; top: 50%; }
+#aboutus .au-card[data-i="3"] { right: 5%; top: 80%; }
+
+.au-num { font-family: 'Barlow', sans-serif; font-weight: 500; font-size: 1.05rem; letter-spacing: 0.1em; color: rgba(255,255,255,0.85); display: block; margin-bottom: 0.7rem; text-shadow: 0 2px 16px rgba(0,0,0,0.7); }
+.au-card-title { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; font-size: clamp(1.5rem, 2.4vw, 2rem); letter-spacing: 0; line-height: 1.05; margin: 0 0 0.7rem; color: #fff; text-shadow: 0 3px 22px rgba(0,0,0,0.78); }
+.au-card-text { font-family: 'Barlow', sans-serif; font-weight: 400; font-size: 0.98rem; line-height: 1.6; color: #fff; margin: 0; text-shadow: 0 2px 16px rgba(0,0,0,0.82); }
+
+@media (max-width: 768px) {
+  .au-title { top: 8vh; font-size: clamp(2.6rem, 12vw, 4rem); }
+  #aboutus .au-card { width: 84vw; }
+  #aboutus .au-card[data-i="0"], #aboutus .au-card[data-i="1"] { left: 8%; right: auto; }
+  #aboutus .au-card[data-i="2"], #aboutus .au-card[data-i="3"] { right: 8%; left: auto; }
+  #aboutus .au-card[data-i="0"], #aboutus .au-card[data-i="2"] { top: 44%; }
+  #aboutus .au-card[data-i="1"], #aboutus .au-card[data-i="3"] { top: 76%; }
+}
+
+/* ============================================================
+   CATALOGUE intro — a centred title that "marries" the scroll
+   (scales + drifts as you scroll through). Start of the catalogue.
+   ============================================================ */
+#catalog-intro {
+  position: fixed; inset: 0; z-index: 6; pointer-events: none; opacity: 0; visibility: hidden;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+}
+.cat-eyebrow {
+  font-family: 'Barlow', sans-serif; text-transform: uppercase; letter-spacing: 0.42em;
+  font-size: 0.8rem; font-weight: 500; color: rgba(255,255,255,0.92); margin: 0 0 1rem; padding-left: 0.42em;
+  text-shadow: 0 2px 18px rgba(0,0,0,0.7); will-change: opacity, transform;
+}
+.cat-title {
+  font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400;
+  font-size: clamp(3.2rem, 12vw, 9.5rem); line-height: 0.95; letter-spacing: -0.01em; margin: 0; color: #fff;
+  text-shadow: 0 8px 50px rgba(0,0,0,0.72); will-change: opacity, transform;
+}
+
+/* ============================================================
+   EXPLORATIONS — catalogue gallery. Just the photo cards, two
+   columns drifting at different speeds (parallax) over the
+   scrolling video. No text, no solid background. Click = lightbox.
+   ============================================================ */
+#explorations { position: relative; min-height: 260vh; z-index: 2; }
+.exp-cols {
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: min(92vw, 1300px); z-index: 20; pointer-events: none;
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 7vw, 8rem);
+}
+.exp-col { display: flex; flex-direction: column; gap: 30vh; padding-top: 22vh; will-change: transform; }
+.exp-col[data-col="b"] { padding-top: 56vh; }
+.exp-card {
+  position: relative; width: 100%; max-width: 340px; aspect-ratio: 1 / 1; margin: 0; align-self: center;
+  border-radius: 18px; overflow: hidden; cursor: pointer; pointer-events: auto;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.4s cubic-bezier(.22,1,.36,1);
+}
+.exp-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.exp-card[data-i="0"] { transform: rotate(-4deg); }
+.exp-card[data-i="1"] { transform: rotate(3deg); }
+.exp-card[data-i="2"] { transform: rotate(-2deg); }
+.exp-card[data-i="3"] { transform: rotate(4deg); }
+.exp-card[data-i="4"] { transform: rotate(-3deg); }
+.exp-card[data-i="5"] { transform: rotate(2deg); }
+.exp-card:hover { transform: rotate(0deg) scale(1.05); }
+
+.exp-lightbox {
+  position: fixed; inset: 0; z-index: 1200; display: flex; align-items: center; justify-content: center;
+  background: rgba(8,8,10,0.85); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  opacity: 0; visibility: hidden; transition: opacity 0.35s ease; cursor: zoom-out; padding: 4vh 4vw;
+}
+.exp-lightbox.open { opacity: 1; visibility: visible; }
+.exp-lightbox-img {
+  max-width: 92vw; max-height: 88vh; border-radius: 14px; display: block;
+  box-shadow: 0 50px 120px rgba(0,0,0,0.6); transform: scale(0.92); transition: transform 0.4s cubic-bezier(.22,1,.36,1);
+}
+.exp-lightbox.open .exp-lightbox-img { transform: scale(1); }
+
+@media (max-width: 768px) {
+  #explorations { min-height: 300vh; }
+  .exp-cols { gap: 1.5rem; width: 94vw; }
+  .exp-col { gap: 22vh; padding-top: 28vh; }
+  .exp-col[data-col="b"] { padding-top: 60vh; }
+  .exp-card { max-width: 42vw; }
+}
+
+/* ============================================================
+   TESTIMONIALS — liquid-glass cards (transparent, like About Us)
+   in a horizontal carousel, between the catalogue and block 2.
+   Click a card to expand it.
+   ============================================================ */
+#testimonials { position: relative; z-index: 2; padding: 9rem 0 7rem; }
+.tm-head { max-width: 1200px; margin: 0 auto 1.5rem; padding: 0 2.5rem; text-align: center; }
+.tm-eyebrow { font-family: 'Barlow', sans-serif; text-transform: uppercase; letter-spacing: 0.4em; font-size: 0.74rem; font-weight: 600; color: rgba(255,255,255,0.88); margin: 0 0 0.9rem; padding-left: 0.4em; text-shadow: 0 2px 18px rgba(0,0,0,0.7); }
+.tm-title { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1; margin: 0; color: #fff; text-shadow: 0 6px 40px rgba(0,0,0,0.7); }
+.tm-track { display: flex; gap: 1.5rem; overflow-x: auto; scroll-behavior: smooth; padding: 1.6rem 2.5rem 2rem; scrollbar-width: none; scroll-snap-type: x proximity; }
+.tm-track::-webkit-scrollbar { display: none; }
+.tm-card {
+  flex: 0 0 auto; width: min(82vw, 330px); min-height: 430px; padding: 2.2rem 1.8rem;
+  border-radius: 24px; display: flex; flex-direction: column; align-items: center; text-align: center;
+  cursor: pointer; scroll-snap-align: center;
+  opacity: 0; transform: translateY(26px); transition: opacity .6s ease, transform .5s cubic-bezier(.22,1,.36,1);
+}
+#testimonials.in .tm-card { opacity: 1; transform: none; }
+.tm-card:hover { transform: translateY(-6px) rotate(-1deg); }
+.tm-avatar {
+  width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin-bottom: 1.3rem; flex: none;
+  border: 1px solid rgba(255,255,255,0.45); box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 6px 18px rgba(0,0,0,0.35);
+}
+.tm-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tm-quote { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; font-size: 1.18rem; line-height: 1.45; color: #fff; margin: 0 0 1.3rem; text-shadow: 0 2px 14px rgba(0,0,0,0.72); }
+.tm-name { font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 1rem; color: #fff; margin: auto 0 0.3rem; text-shadow: 0 2px 12px rgba(0,0,0,0.7); }
+.tm-role { font-family: 'Barlow', sans-serif; font-weight: 400; font-size: 0.82rem; color: rgba(255,255,255,0.82); margin: 0; text-shadow: 0 2px 12px rgba(0,0,0,0.7); }
+.tm-nav { max-width: 1200px; margin: 0 auto; padding: 0 2.5rem; display: flex; justify-content: flex-end; gap: 0.6rem; }
+.tm-arrow { width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.4); background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .2s ease, transform .2s ease; }
+.tm-arrow:hover { background: rgba(255,255,255,0.18); }
+.tm-arrow:active { transform: scale(0.92); }
+.tm-arrow svg { width: 1.2rem; height: 1.2rem; }
+
+.tm-modal { position: fixed; inset: 0; z-index: 1200; display: flex; align-items: center; justify-content: center; padding: 6vh 6vw; background: rgba(8,8,10,0.72); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); opacity: 0; visibility: hidden; transition: opacity .35s ease; cursor: zoom-out; }
+.tm-modal.open { opacity: 1; visibility: visible; }
+.tm-modal-card { width: min(92vw, 560px); padding: 3rem 2.5rem; border-radius: 26px; display: flex; flex-direction: column; align-items: center; text-align: center; transform: scale(0.92); transition: transform .4s cubic-bezier(.22,1,.36,1); }
+.tm-modal.open .tm-modal-card { transform: scale(1); }
+.tm-modal-card .tm-quote { font-size: 1.6rem; }
+.tm-modal-card .tm-card { opacity: 1; transform: none; cursor: default; }
+
+@media (max-width: 768px) { #testimonials { padding: 6rem 0 5rem; } .tm-card { min-height: 400px; } }
+
+/* Block 2's deck duplicates block 1's — hide it (those numbers already appeared) */
+#fixed-cards-2 { display: none !important; }
+
+/* ============================================================
+   CONTACT FORM — liquid-glass card in block 2's scroll. Fields
+   kept high-contrast so the text is always clearly legible.
+   ============================================================ */
+#contact-form {
+  position: fixed; inset: 0; z-index: 6; pointer-events: none; opacity: 0; visibility: hidden;
+  display: flex; align-items: center; justify-content: center; padding: 7rem 1.5rem 3rem;
+}
+/* Transparent liquid glass, like the other cards — legibility comes from text-shadow */
+#contact-form .cf-card {
+  width: min(94vw, 940px); padding: 3rem 3rem; border-radius: 28px; pointer-events: auto; will-change: transform;
+}
+.cf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+
+/* Right column: interactive globe + the business location / Google Maps link */
+.cf-right { display: flex; flex-direction: column; align-items: center; gap: 1.2rem; }
+.cf-globe-wrap { position: relative; width: 100%; max-width: 340px; aspect-ratio: 1 / 1; }
+.cf-globe-wrap::before { content: ''; position: absolute; inset: -6%; border-radius: 50%; background: radial-gradient(circle, rgba(8,12,22,0.55) 0%, rgba(8,12,22,0) 68%); pointer-events: none; }
+#cf-globe { position: relative; width: 100%; height: 100%; touch-action: none; }
+.cf-loc { text-align: center; }
+.cf-loc-city { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 1.35rem; color: #fff; margin: 0 0 0.2rem; text-shadow: 0 2px 16px rgba(0,0,0,0.9); }
+.cf-loc-addr { font-family: 'Barlow', sans-serif; font-size: 0.86rem; color: rgba(255,255,255,0.85); margin: 0 0 0.9rem; text-shadow: 0 2px 12px rgba(0,0,0,0.9); }
+.cf-map-btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.6rem 1.3rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.5); background: rgba(255,255,255,0.08); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color: #fff; text-decoration: none; font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 0.84rem; text-shadow: 0 2px 10px rgba(0,0,0,0.7); transition: background .2s ease; }
+.cf-map-btn:hover { background: rgba(255,255,255,0.2); }
+.cf-eyebrow { font-family: 'Barlow', sans-serif; text-transform: uppercase; letter-spacing: 0.42em; font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.92); margin: 0 0 0.9rem; padding-left: 0.42em; text-shadow: 0 2px 16px rgba(0,0,0,0.9); }
+.cf-title { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1; margin: 0 0 1.1rem; color: #fff; text-shadow: 0 4px 30px rgba(0,0,0,0.92); }
+.cf-lead { font-family: 'Barlow', sans-serif; font-weight: 400; font-size: 0.98rem; line-height: 1.6; color: #fff; margin: 0 0 2rem; max-width: 34ch; text-shadow: 0 2px 16px rgba(0,0,0,0.92); }
+.cf-details { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1.05rem; }
+.cf-details li { display: flex; flex-direction: column; gap: 0.25rem; }
+.cf-d-label { font-family: 'Barlow', sans-serif; text-transform: uppercase; letter-spacing: 0.22em; font-size: 0.64rem; font-weight: 600; color: rgba(255,255,255,0.8); text-shadow: 0 2px 12px rgba(0,0,0,0.85); }
+.cf-d-value { font-family: 'Barlow', sans-serif; font-size: 1rem; font-weight: 600; color: #fff; text-decoration: none; text-shadow: 0 2px 14px rgba(0,0,0,0.92); transition: color .2s ease; }
+a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
+.cf-map .cf-ext { color: rgba(255,255,255,0.75); }
+
+.cf-form { display: flex; flex-direction: column; gap: 1.1rem; }
+.cf-field { display: flex; flex-direction: column; gap: 0.4rem; }
+.cf-field > span { font-family: 'Barlow', sans-serif; text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.64rem; font-weight: 600; color: rgba(255,255,255,0.85); text-shadow: 0 2px 12px rgba(0,0,0,0.88); }
+.cf-field input, .cf-field textarea {
+  width: 100%; padding: 0.7rem 0.1rem; border: 0; border-bottom: 1px solid rgba(255,255,255,0.5);
+  background: transparent; color: #fff; font-family: 'Barlow', sans-serif; font-size: 1rem; outline: none;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.92); transition: border-color .25s ease;
+}
+.cf-field input::placeholder, .cf-field textarea::placeholder { color: rgba(255,255,255,0.7); }
+.cf-field input:focus, .cf-field textarea:focus { border-bottom-color: #fff; }
+.cf-field textarea { min-height: 64px; resize: vertical; }
+.cf-submit {
+  margin-top: 0.7rem; align-self: flex-start; padding: 0.95rem 2.1rem; border: 0; border-radius: 999px; cursor: pointer;
+  background: #fff; color: #141414; font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 0.92rem; letter-spacing: 0.02em;
+  box-shadow: 0 12px 34px rgba(0,0,0,0.32); transition: transform .2s ease, background .2s ease;
+}
+.cf-submit:hover { transform: translateY(-2px); background: rgba(255,255,255,0.88); }
+@media (max-width: 760px) {
+  #contact-form { padding-top: 6rem; }
+  #contact-form .cf-card { padding: 2rem 1.6rem; }
+  .cf-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+  .cf-lead { margin-bottom: 1.4rem; }
+}
+
+/* ===================== FOOTER ===================== */
+.site-footer { position: relative; z-index: 5; background: #0b0b0d; color: #fff; padding: 5rem 2.5rem 2.5rem; border-top: 1px solid rgba(255,255,255,0.08); }
+.ft-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 2.5rem; }
+.ft-logo { display: inline-flex; align-items: center; gap: 0.6rem; color: #fff; text-decoration: none; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 1.1rem; }
+.ft-logo svg { width: 1.3rem; height: 1.3rem; }
+.ft-tag { font-family: 'Barlow', sans-serif; font-size: 0.88rem; line-height: 1.6; color: rgba(255,255,255,0.6); margin: 1rem 0 1.2rem; }
+.ft-social { display: flex; gap: 0.6rem; }
+.ft-social a { width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.18); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.8); transition: all .2s ease; }
+.ft-social a:hover { background: rgba(255,255,255,0.1); color: #fff; }
+.ft-social svg { width: 1.05rem; height: 1.05rem; }
+.ft-col h4 { font-family: 'Barlow', sans-serif; text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.7rem; font-weight: 600; color: rgba(255,255,255,0.5); margin: 0 0 1.1rem; }
+.ft-col a, .ft-col span { display: block; font-family: 'Barlow', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.78); text-decoration: none; margin-bottom: 0.7rem; transition: color .2s ease; }
+.ft-col a:hover { color: #fff; }
+.ft-bottom { max-width: 1200px; margin: 3rem auto 0; padding-top: 1.6rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.6rem; font-family: 'Barlow', sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.45); }
+@media (max-width: 820px) { .ft-inner { grid-template-columns: 1fr 1fr; } .ft-brand { grid-column: 1 / -1; } }
+@media (max-width: 520px) { .ft-inner { grid-template-columns: 1fr; } }
+
+/* Bold, well-seen section titles — thicken the thin Instrument Serif like the About title */
+.cat-title, .tm-title, .cf-title { -webkit-text-stroke: 0.7px #fff; paint-order: stroke fill; text-shadow: 0 3px 6px rgba(0,0,0,0.55), 0 8px 46px rgba(0,0,0,0.9); }
+
+/* ---- user-provided liquid glass ---- */
+.liquid-glass {
+  background: rgba(255,255,255,0.01);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.1);
+  position: relative;
+  overflow: hidden;
+}
+.liquid-glass::before {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.45) 0%,
+    rgba(255,255,255,0.15) 20%,
+    rgba(255,255,255,0) 40%,
+    rgba(255,255,255,0) 60%,
+    rgba(255,255,255,0.15) 80%,
+    rgba(255,255,255,0.45) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+.liquid-glass-strong {
+  background: rgba(255,255,255,0.01);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border: none;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.05), inset 0 1px 1px rgba(255,255,255,0.15);
+  position: relative;
+  overflow: hidden;
+}
+.liquid-glass-strong::before {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.5) 0%,
+    rgba(255,255,255,0.2) 20%,
+    rgba(255,255,255,0) 40%,
+    rgba(255,255,255,0) 60%,
+    rgba(255,255,255,0.2) 80%,
+    rgba(255,255,255,0.5) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+</style>
+</head>
+<body>
+
+<!-- Scroll Video Background (PART 1) -->
+<div id="scroll-video-container">
+  <canvas id="video-canvas"></canvas>
+  <video id="video-fallback" muted playsinline preload="auto" src="background.mp4"></video>
+  <div class="overlay"></div>
+</div>
+
+<!-- Scroll Video Background (PART 2 — new video) -->
+<div id="scroll-video-container-2">
+  <canvas id="video-canvas-2"></canvas>
+  <video id="video-fallback-2" muted playsinline preload="auto" src="background2.mp4"></video>
+  <div class="overlay"></div>
+</div>
+
+<!-- Particles -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- Fixed Cards (PART 1) -->
+<div id="fixed-cards">
+  <div class="grid">
+    <div class="deck-col">
+      <p class="deck-tagline">Concevoir.<br>Aménager.<br>Habiter.</p>
+      <div class="deck-cta">
+        <a href="#explorations" class="btn btn-solid">Voir le catalogue</a>
+        <a href="#contact" class="btn btn-ghost">Réserver un projet</a>
+      </div>
+    </div>
+    <div class="deck-col deck-stats">
+      <div class="deck-fact"><span class="deck-fact-k">200+</span><span class="deck-fact-v">projets réalisés</span></div>
+      <div class="deck-fact"><span class="deck-fact-k">180+</span><span class="deck-fact-v">intérieurs livrés</span></div>
+      <div class="deck-fact"><span class="deck-fact-k">90+</span><span class="deck-fact-v">clients accompagnés</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Fixed Cards (PART 2) -->
+<div id="fixed-cards-2">
+  <div class="grid">
+    <div class="deck-col">
+      <p class="deck-tagline">Concevoir.<br>Aménager.<br>Habiter.</p>
+      <div class="deck-cta">
+        <a href="#explorations" class="btn btn-solid">Voir le catalogue</a>
+        <a href="#contact" class="btn btn-ghost">Réserver un projet</a>
+      </div>
+    </div>
+    <div class="deck-col deck-stats">
+      <div class="deck-fact"><span class="deck-fact-k">200+</span><span class="deck-fact-v">projets réalisés</span></div>
+      <div class="deck-fact"><span class="deck-fact-k">180+</span><span class="deck-fact-v">intérieurs livrés</span></div>
+      <div class="deck-fact"><span class="deck-fact-k">90+</span><span class="deck-fact-v">clients accompagnés</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation (PillNav) -->
+<nav class="pillnav" aria-label="Primary">
+  <div class="pillnav-left">
+    <a class="pillnav-logo" href="#" aria-label="Accueil">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <rect x="3" y="7" width="3.4" height="10" rx="1.7"/>
+        <rect x="10.3" y="4" width="3.4" height="13" rx="1.7"/>
+        <rect x="17.6" y="9" width="3.4" height="8" rx="1.7"/>
+      </svg>
+    </a>
+    <span class="pillnav-wordmark">Valentine&nbsp;Duflot</span>
+  </div>
+
+  <div class="pillnav-pills">
+    <ul role="menubar">
+      <li role="none"><a class="pill is-active" role="menuitem" href="#about-trigger"><span class="hover-circle" aria-hidden="true"></span><span class="label-stack"><span class="pill-label">À propos</span><span class="pill-label-hover" aria-hidden="true">À propos</span></span></a></li>
+      <li role="none"><a class="pill" role="menuitem" href="#explorations"><span class="hover-circle" aria-hidden="true"></span><span class="label-stack"><span class="pill-label">Catalogue</span><span class="pill-label-hover" aria-hidden="true">Catalogue</span></span></a></li>
+      <li role="none"><a class="pill" role="menuitem" href="#testimonials"><span class="hover-circle" aria-hidden="true"></span><span class="label-stack"><span class="pill-label">Témoignages</span><span class="pill-label-hover" aria-hidden="true">Témoignages</span></span></a></li>
+      <li role="none"><a class="pill" role="menuitem" href="#contact"><span class="hover-circle" aria-hidden="true"></span><span class="label-stack"><span class="pill-label">Contact</span><span class="pill-label-hover" aria-hidden="true">Contact</span></span></a></li>
+    </ul>
+  </div>
+
+  <button class="pillnav-burger" aria-label="Ouvrir le menu" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<!-- PillNav mobile dropdown -->
+<div class="pillnav-mobile" id="pillnav-mobile">
+  <ul>
+    <li><a class="is-active" href="#about-trigger">À propos</a></li>
+    <li><a href="#explorations">Catalogue</a></li>
+    <li><a href="#testimonials">Témoignages</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+
+<!-- SCROLL CUE (premium "Scroll" prompt, fades on scroll) -->
+<div id="scroll-cue" aria-hidden="true">
+  <span class="scroll-cue-label">Défiler</span>
+  <span class="scroll-cue-track"><span class="scroll-cue-dot"></span></span>
+</div>
+
+<!-- HERO — architecture-style landing over block 1's video (clears as the doors open) -->
+<div id="hero">
+  <!-- (1) brand name — sits behind the re-drawn foreground -->
+  <div class="hero-title-layer">
+    <div class="hero-wrap">
+      <div class="vd-name">
+        <div class="vd-line vd-valentine"><span class="vd-in">Valentine</span></div>
+        <h1 class="vd-line vd-duflot">Duflot</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- (3) legibility scrims -->
+  <div class="hero-scrim"></div>
+</div>
+
+<!-- ABOUT US — 4 liquid-glass cards over block-1's video, after the numbers disappear -->
+<div id="aboutus" aria-hidden="true">
+  <div class="au-stage">
+    <h2 class="au-title">À propos<br>de nous</h2>
+    <div class="au-deck">
+      <article class="au-card liquid-glass" data-i="0">
+        <span class="au-num">01</span>
+        <h3 class="au-card-title">Écoute &amp; conception</h3>
+        <p class="au-card-text">Nous partons de vos usages, de vos envies et de votre budget pour dessiner un intérieur qui vous ressemble vraiment.</p>
+      </article>
+      <article class="au-card liquid-glass" data-i="1">
+        <span class="au-num">02</span>
+        <h3 class="au-card-title">Artisans &amp; savoir-faire</h3>
+        <p class="au-card-text">Des compagnons expérimentés et des matériaux nobles, au service d'une exécution soignée jusque dans le moindre détail.</p>
+      </article>
+      <article class="au-card liquid-glass" data-i="2">
+        <span class="au-num">03</span>
+        <h3 class="au-card-title">Transparence &amp; suivi</h3>
+        <p class="au-card-text">Un interlocuteur unique, un planning clair et un budget maîtrisé, du premier rendez-vous à la remise des clés.</p>
+      </article>
+      <article class="au-card liquid-glass" data-i="3">
+        <span class="au-num">04</span>
+        <h3 class="au-card-title">Finition &amp; garantie</h3>
+        <p class="au-card-text">Un chantier livré clé en main, dans les délais et garanti&nbsp;: votre intérieur, prêt à être habité.</p>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- CATALOGUE intro — centred title that marries the scroll (start of the catalogue part) -->
+<div id="catalog-intro" aria-hidden="true">
+  <p class="cat-eyebrow">Le catalogue</p>
+  <h2 class="cat-title">Catalogue</h2>
+</div>
+
+<!-- ===================== MAIN CONTENT — PART 1 ===================== -->
+<div id="content">
+  <!-- Spacer -->
+  <div style="height:150vh;"></div>
+
+  <!-- Cards Trigger Zone -->
+  <div id="cards-trigger" style="height:200vh;"></div>
+
+  <!-- Camera walks through the door; About begins once we're inside the lobby -->
+  <div style="height:520vh;"></div>
+
+  <!-- About-us scroll room (cards reveal here, after the doors open) -->
+  <div id="about-trigger" style="height:360vh;"></div>
+
+  <!-- Catalogue intro scroll room (centred title, after the About cards) -->
+  <div id="catalog-trigger" style="height:230vh;"></div>
+</div>
+
+<!-- ===================== EXPLORATIONS — parallax gallery (catalogue), over the scroll, no black bg ===================== -->
+<section id="explorations">
+  <div class="exp-cols">
+    <div class="exp-col" data-col="a">
+      <figure class="exp-card" data-i="0"><img src="gallery1.jpg" alt="Rénovation — réalisation 1" loading="lazy"></figure>
+      <figure class="exp-card" data-i="1"><img src="gallery2.jpg" alt="Rénovation chambre — avant / après" loading="lazy"></figure>
+      <figure class="exp-card" data-i="2"><img src="gallery3.jpg" alt="Rénovation salon — avant / après" loading="lazy"></figure>
+    </div>
+    <div class="exp-col" data-col="b">
+      <figure class="exp-card" data-i="3"><img src="gallery4.jpg" alt="Rénovation bureau — avant / après" loading="lazy"></figure>
+      <figure class="exp-card" data-i="4"><img src="gallery5.jpg" alt="Rénovation entrée — avant / après" loading="lazy"></figure>
+      <figure class="exp-card" data-i="5"><img src="gallery6.jpg" alt="Rénovation dressing — avant / après" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox for the gallery cards -->
+<div id="exp-lightbox" class="exp-lightbox"><img class="exp-lightbox-img" alt="" /></div>
+
+<!-- ===================== TESTIMONIALS — liquid-glass carousel (between catalogue and block 2) ===================== -->
+<section id="testimonials">
+  <div class="tm-head">
+    <p class="tm-eyebrow">Témoignages</p>
+    <h2 class="tm-title">Ils nous ont confié leur intérieur</h2>
+  </div>
+  <div class="tm-track" id="tm-track" data-lenis-prevent>
+    <article class="tm-card liquid-glass" style="--c1:#b3a087;--c2:#5a5345"><div class="tm-avatar"><img src="face1.jpg" alt="Sophie Laurent" loading="lazy"></div><p class="tm-quote">« Valentine a révélé tout le potentiel de notre appartement. Chaque pièce respire la lumière — un travail d'orfèvre, du croquis à la livraison. »</p><p class="tm-name">Sophie Laurent</p><p class="tm-role">Appartement haussmannien · Paris 8e</p></article>
+    <article class="tm-card liquid-glass" style="--c1:#8a93a6;--c2:#41465a"><div class="tm-avatar"><img src="face2.jpg" alt="Marc Dubois" loading="lazy"></div><p class="tm-quote">« Délais tenus, budget respecté, finitions impeccables. On nous disait que c'était rare — eux l'ont fait. »</p><p class="tm-name">Marc Dubois</p><p class="tm-role">Maison de ville · Lyon</p></article>
+    <article class="tm-card liquid-glass" style="--c1:#a9b39c;--c2:#4c5446"><div class="tm-avatar"><img src="face3.jpg" alt="Camille Mercier" loading="lazy"></div><p class="tm-quote">« Une écoute remarquable. Notre duplex nous ressemble enfin, sans jamais sacrifier le confort au style. »</p><p class="tm-name">Camille Mercier</p><p class="tm-role">Duplex · Bordeaux</p></article>
+    <article class="tm-card liquid-glass" style="--c1:#c2a98f;--c2:#6a5a49"><div class="tm-avatar"><img src="face4.jpg" alt="Thomas Lefèvre" loading="lazy"></div><p class="tm-quote">« Du sur-mesure de bout en bout. Les artisans sont d'un niveau exceptionnel, chaque détail est pensé. »</p><p class="tm-name">Thomas Lefèvre</p><p class="tm-role">Villa contemporaine · Nice</p></article>
+    <article class="tm-card liquid-glass" style="--c1:#9fa7b6;--c2:#474c5a"><div class="tm-avatar"><img src="face5.jpg" alt="Élise Moreau" loading="lazy"></div><p class="tm-quote">« J'avais peur des travaux. Avec un interlocuteur unique et un planning clair, tout a été d'une simplicité déconcertante. »</p><p class="tm-name">Élise Moreau</p><p class="tm-role">Appartement · Marseille</p></article>
+    <article class="tm-card liquid-glass" style="--c1:#b6a890;--c2:#585040"><div class="tm-avatar"><img src="face6.jpg" alt="Antoine Rousseau" loading="lazy"></div><p class="tm-quote">« Ils ont transformé un plateau brut en un lieu chaleureux et raffiné. Le résultat dépasse nos attentes. »</p><p class="tm-name">Antoine Rousseau</p><p class="tm-role">Loft · Lille</p></article>
+    <article class="tm-card liquid-glass" style="--c1:#a7b0a0;--c2:#4a5048"><div class="tm-avatar"><img src="face7.jpg" alt="Julie Garnier" loading="lazy"></div><p class="tm-quote">« Élégance et fonctionnalité réunies. Nos invités croient à chaque fois sortir d'un magazine. »</p><p class="tm-name">Julie Garnier</p><p class="tm-role">Maison familiale · Nantes</p></article>
+    <article class="tm-card liquid-glass" style="--c1:#bfa78c;--c2:#65543f"><div class="tm-avatar"><img src="face8.jpg" alt="Nicolas Faure" loading="lazy"></div><p class="tm-quote">« Un savoir-faire rare et une vraie vision. Notre penthouse est devenu une pièce unique. »</p><p class="tm-name">Nicolas Faure</p><p class="tm-role">Penthouse · Cannes</p></article>
+    <article class="tm-card liquid-glass" style="--c1:#9aa3b3;--c2:#444a58"><div class="tm-avatar"><img src="face9.jpg" alt="Charlotte Bernard" loading="lazy"></div><p class="tm-quote">« Conseils justes, matières nobles, exécution parfaite. Je recommande les yeux fermés. »</p><p class="tm-name">Charlotte Bernard</p><p class="tm-role">Appartement · Strasbourg</p></article>
+    <article class="tm-card liquid-glass" style="--c1:#b4a78f;--c2:#564d3e"><div class="tm-avatar"><img src="face10.jpg" alt="Pierre Lambert" loading="lazy"></div><p class="tm-quote">« Le suivi a été irréprochable. On se sent accompagné à chaque étape, sans aucune mauvaise surprise. »</p><p class="tm-name">Pierre Lambert</p><p class="tm-role">Maison · Toulouse</p></article>
+    <article class="tm-card liquid-glass" style="--c1:#a8a2ad;--c2:#4e4a58"><div class="tm-avatar"><img src="face11.jpg" alt="Inès Khalil" loading="lazy"></div><p class="tm-quote">« Même sur un petit espace, ils ont fait des merveilles. Chaque centimètre est optimisé avec goût. »</p><p class="tm-name">Inès Khalil</p><p class="tm-role">Studio · Paris 11e</p></article>
+    <article class="tm-card liquid-glass" style="--c1:#b1a98d;--c2:#534c3c"><div class="tm-avatar"><img src="face12.jpg" alt="Hélène Vidal" loading="lazy"></div><p class="tm-quote">« Un projet mené avec passion et précision. Notre villa a gagné en âme et en valeur. »</p><p class="tm-name">Hélène Vidal</p><p class="tm-role">Villa · Aix-en-Provence</p></article>
+  </div>
+  <div class="tm-nav">
+    <button class="tm-arrow" data-dir="-1" aria-label="Précédent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></button>
+    <button class="tm-arrow" data-dir="1" aria-label="Suivant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+  </div>
+</section>
+
+<div id="tm-modal" class="tm-modal"><div class="tm-modal-card liquid-glass"></div></div>
+
+<!-- ===================== CONTACT FORM — liquid-glass, in block 2's scroll (prototype) ===================== -->
+<div id="contact-form" aria-hidden="true">
+  <div class="cf-card liquid-glass">
+    <div class="cf-grid">
+      <div class="cf-left">
+        <p class="cf-eyebrow">Contact</p>
+        <h2 class="cf-title">Parlons de votre projet</h2>
+        <p class="cf-lead">Un intérieur à imaginer, une rénovation à confier ? Écrivez-nous — réponse sous 24&nbsp;h.</p>
+        <form class="cf-form" onsubmit="return false;">
+          <label class="cf-field"><span>Nom</span><input type="text" placeholder="Votre nom" autocomplete="name" /></label>
+          <label class="cf-field"><span>Email</span><input type="email" placeholder="vous@email.com" autocomplete="email" /></label>
+          <label class="cf-field"><span>Téléphone</span><input type="tel" placeholder="06 00 00 00 00" autocomplete="tel" /></label>
+          <label class="cf-field"><span>Votre projet</span><textarea placeholder="Décrivez votre projet en quelques mots…"></textarea></label>
+          <button class="cf-submit" type="submit">Envoyer la demande</button>
+        </form>
+      </div>
+      <div class="cf-right">
+        <div class="cf-globe-wrap"><canvas id="cf-globe"></canvas></div>
+        <div class="cf-loc">
+          <p class="cf-loc-city">Nice · France</p>
+          <p class="cf-loc-addr">22 Rue Cassini, 06300 Nice</p>
+          <a class="cf-map-btn" href="https://www.google.com/maps/search/?api=1&query=Valentine+Duflot+Architecte+Int%C3%A9rieur+22+Rue+Cassini+06300+Nice" target="_blank" rel="noopener">Voir sur Google Maps ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== MAIN CONTENT — PART 2 (new scroll motion, new video) ===================== -->
+<div id="content2">
+  <!-- Spacer -->
+  <div style="height:150vh;"></div>
+
+  <!-- Cards Trigger Zone -->
+  <div id="cards-trigger-2" style="height:200vh;"></div>
+
+  <!-- Travel deeper into block 2 so the form begins at the kitchen frame -->
+  <div style="height:320vh;"></div>
+
+  <!-- Contact form scroll room (begins at the kitchen frame, ends before the Valentine reveal) -->
+  <div id="contact-trigger" style="height:300vh;"></div>
+
+  <!-- Spacer -->
+  <div style="height:100vh;"></div>
+
+  <!-- Section 3 -->
+  <section id="section-three-2">
+    <div class="inner" id="section-three-inner-2">
+      <p>Présentation</p>
+      <h2>Valentine Duflot</h2>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="ft-inner">
+    <div class="ft-brand">
+      <a class="ft-logo" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="7" width="3.4" height="10" rx="1.7"/><rect x="10.3" y="4" width="3.4" height="13" rx="1.7"/><rect x="17.6" y="9" width="3.4" height="8" rx="1.7"/></svg><span>Valentine&nbsp;Duflot</span></a>
+      <p class="ft-tag">Architecte d'intérieur · rénovation haut de gamme.<br>Nice · France · Belgique · Suisse.</p>
+      <div class="ft-social">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.6 1.3 1.4 0 .9-.5 2.2-.8 3.4-.2.9.5 1.7 1.5 1.7 1.8 0 3-2.3 3-5 0-2-1.4-3.6-3.9-3.6a4.5 4.5 0 0 0-4.7 4.5c0 .9.3 1.5.7 2 .1.2.1.3.1.5l-.3 1.1c0 .2-.2.3-.4.2-1.1-.5-1.7-1.9-1.7-3.1 0-2.5 1.8-5.5 5.5-5.5 2.9 0 4.9 2.1 4.9 4.4 0 3-1.7 5.2-4.1 5.2-.8 0-1.6-.4-1.9-.9l-.5 2c-.2.7-.6 1.5-1 2A10 10 0 1 0 12 2z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="7.5" y1="10.5" x2="7.5" y2="17"/><circle cx="7.5" cy="7.3" r="0.6" fill="currentColor"/><path d="M11.5 17v-3.5a2 2 0 0 1 4 0V17"/><line x1="11.5" y1="10.5" x2="11.5" y2="17"/></svg></a>
+      </div>
+    </div>
+    <div class="ft-col">
+      <h4>Navigation</h4>
+      <a href="#about-trigger">À propos</a>
+      <a href="#explorations">Catalogue</a>
+      <a href="#testimonials">Témoignages</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="ft-col">
+      <h4>Contact</h4>
+      <a href="https://www.google.com/maps/search/?api=1&query=Valentine+Duflot+Architecte+Int%C3%A9rieur+22+Rue+Cassini+06300+Nice" target="_blank" rel="noopener">22 Rue Cassini, 06300 Nice ↗</a>
+      <a href="tel:+33761551586">+33 7 61 55 15 86</a>
+      <a href="mailto:contact@valentineduflot.fr">contact@valentineduflot.fr</a>
+      <span>Lun – Sam · 9h – 17h</span>
+    </div>
+    <div class="ft-col">
+      <h4>Légal</h4>
+      <a href="#">Mentions légales</a>
+      <a href="#">Politique de confidentialité</a>
+      <a href="#">Gestion des cookies</a>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <span>© 2026 Valentine Duflot. Tous droits réservés.</span>
+    <span>Conçu avec soin à Nice.</span>
+  </div>
+</footer>
+
+<script>
+/* ===================== PART 1 — UNCHANGED (only its scroll range is now bounded to its own section) ===================== */
+(function() {
+  // ===================== SCROLL VIDEO =====================
+  const canvas = document.getElementById('video-canvas');
+  const videoEl = document.getElementById('video-fallback');
+  const ctx = canvas.getContext('2d');
+  // Hero foreground: same frame re-drawn (masked to its lower half) so the house
+  // occludes the bottom of the giant brand name — the "behind the house" effect.
+  const fgCanvas = document.getElementById('hero-fg');
+  const fgCtx = fgCanvas ? fgCanvas.getContext('2d') : null;
+  let frames = [];
+  let framesReady = false;
+  let lastFrameIndex = -1;
+  let videoSeeking = false;
+
+  function resizeCanvas() {
+    const dpr = Math.min(devicePixelRatio, 2);
+    const rect = canvas.getBoundingClientRect();
+    const w = Math.round(rect.width * dpr);
+    const h = Math.round(rect.height * dpr);
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width = w;
+      canvas.height = h;
+    }
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    if (fgCanvas && fgCtx) {
+      const fr = fgCanvas.getBoundingClientRect();
+      const fw = Math.round(fr.width * dpr), fh = Math.round(fr.height * dpr);
+      if (fgCanvas.width !== fw || fgCanvas.height !== fh) { fgCanvas.width = fw; fgCanvas.height = fh; }
+      fgCtx.imageSmoothingEnabled = true;
+      fgCtx.imageSmoothingQuality = 'high';
+    }
+    lastFrameIndex = -1;
+  }
+
+  function waitForEvent(el, ev, timeout) {
+    return new Promise((resolve, reject) => {
+      const on = () => { el.removeEventListener(ev, on); resolve(); };
+      el.addEventListener(ev, on);
+      if (timeout) setTimeout(() => { el.removeEventListener(ev, on); reject(); }, timeout);
+    });
+  }
+
+  async function extractFrames() {
+    try {
+      const video = document.createElement('video');
+      video.muted = true;
+      video.playsInline = true;
+      video.preload = 'auto';
+      video.src = videoEl.currentSrc || videoEl.src || 'background.mp4';
+
+      if (video.readyState < 1) await waitForEvent(video, 'loadedmetadata', 20000);
+      if (!video.duration || !isFinite(video.duration)) throw new Error('no duration');
+
+      const scale = Math.min(1, 1280 / video.videoWidth);
+      const scaledWidth = Math.round(video.videoWidth * scale);
+      const scaledHeight = Math.round(video.videoHeight * scale);
+      // Capture every native frame (sources are 24 fps) at full resolution for
+      // perfectly smooth, sharp scrubbing — no missing frames, no duplicates.
+      const frameCount = Math.max(60, Math.min(260, Math.round(video.duration * 24)));
+
+      for (let i = 0; i < frameCount; i++) {
+        const time = (i / (frameCount - 1)) * (video.duration - 0.04);
+        video.currentTime = time;
+        await waitForEvent(video, 'seeked', 4000);
+        const bitmap = await createImageBitmap(video, { resizeWidth: scaledWidth, resizeHeight: scaledHeight });
+        frames.push(bitmap);
+      }
+
+      if (frames.length > 0) {
+        framesReady = true;
+        canvas.style.visibility = 'visible';
+        videoEl.style.display = 'none';
+      }
+    } catch (e) {
+      canvas.style.visibility = 'hidden';
+      videoEl.style.display = 'block';
+    }
+  }
+
+  function getScrollBounds() {
+    // Bound part 1's video to its own section so it still finishes exactly on the
+    // "Veldara 8" frame, even though more content now follows below it.
+    const content1 = document.getElementById('content');
+    // Keep part 1's video moving all the way to the cut (its section bottom) so
+    // there's no frozen tail before block 2 takes over.
+    const end = content1.offsetTop + content1.offsetHeight;
+    // Start at the very first pixel of scroll so the video moves immediately
+    // (no dead zone at the beginning).
+    return { start: 0, end: end };
+  }
+
+  function getProgress() {
+    const { start, end } = getScrollBounds();
+    const range = end - start;
+    if (range <= 0) return 0;
+    return Math.max(0, Math.min(1, (window.scrollY - start) / range));
+  }
+
+  function drawCover(c2, cv, frame) {
+    const cw = cv.width, ch = cv.height;
+    const s = Math.max(cw / frame.width, ch / frame.height);
+    const dw = frame.width * s, dh = frame.height * s;
+    c2.drawImage(frame, (cw - dw) / 2, (ch - dh) / 2, dw, dh);
+  }
+
+  function drawFrame(frame) {
+    drawCover(ctx, canvas, frame);
+    // Paint the same frame into the hero foreground (CSS masks it to the lower
+    // half) so the house occludes the brand name's base — "behind the house".
+    // Skip it once the hero is gone to save per-frame work.
+    if (fgCtx && fgCanvas && displayP < 0.45) drawCover(fgCtx, fgCanvas, frame);
+  }
+
+  // Cache hero DOM once — querying it every animation frame causes jank.
+  const heroEl = document.getElementById('hero');
+  const heroUI = heroEl ? heroEl.querySelector('.hero-ui') : null;
+  const heroTitleLayer = heroEl ? heroEl.querySelector('.hero-title-layer') : null;
+  const heroScrim = heroEl ? heroEl.querySelector('.hero-scrim') : null;
+  const valIn = document.querySelector('#hero .vd-valentine .vd-in');
+  const clamp01 = v => Math.max(0, Math.min(1, v));
+
+  // Eased progress: the displayed scrub position glides toward the scroll target
+  // instead of snapping, so the video stays buttery even on coarse scroll steps.
+  let displayP = -1;
+
+  function videoTick() {
+    const target = getProgress();
+    if (displayP < 0) displayP = target;
+    else displayP += (target - displayP) * 0.2;
+    if (Math.abs(target - displayP) < 0.0004) displayP = target;
+    const progress = displayP;
+
+    if (heroEl) {
+      if (heroUI) {
+        const uo = clamp01(1 - progress / 0.20);
+        heroUI.style.opacity = uo;
+        heroUI.style.pointerEvents = uo > 0.1 ? 'auto' : 'none';
+      }
+      // The firm name (and its scrim) disappears entirely by the time the scroll
+      // reaches the door (~42% into the video).
+      const nameStart = 0.32, nameEnd = 0.42;
+      const no = progress <= nameStart ? 1
+               : progress >= nameEnd ? 0
+               : 1 - (progress - nameStart) / (nameEnd - nameStart);
+      if (heroTitleLayer) heroTitleLayer.style.opacity = no;
+      if (heroScrim) heroScrim.style.opacity = no;
+      heroEl.style.visibility = (no <= 0.001 && progress > 0.2) ? 'hidden' : 'visible';
+    }
+    // VALENTINE rises out from behind the house as you scroll (80% hidden → 0).
+    if (valIn) {
+      const r = clamp01(progress / 0.25);
+      valIn.style.transform = 'translateY(' + ((1 - r) * 80) + '%)';
+    }
+    if (framesReady && frames.length > 0) {
+      const idx = Math.round(progress * (frames.length - 1));
+      if (idx !== lastFrameIndex) {
+        lastFrameIndex = idx;
+        if (frames[idx]) drawFrame(frames[idx]);
+      }
+    } else if (videoEl.duration && isFinite(videoEl.duration) && videoEl.readyState >= 1) {
+      const t = progress * videoEl.duration;
+      if (!videoSeeking && Math.abs(videoEl.currentTime - t) > 0.001) {
+        videoSeeking = true;
+        videoEl.currentTime = t;
+      }
+    }
+    requestAnimationFrame(videoTick);
+  }
+
+  videoEl.addEventListener('seeked', () => { videoSeeking = false; });
+  videoEl.addEventListener('stalled', () => { videoSeeking = false; });
+  videoEl.addEventListener('loadeddata', () => { videoEl.currentTime = 0; });
+  canvas.style.visibility = 'hidden';
+
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+  requestAnimationFrame(videoTick);
+  extractFrames();
+
+  // ===================== PARTICLES (shared) =====================
+  const pCanvas = document.getElementById('particles-canvas');
+  const pCtx = pCanvas.getContext('2d');
+  let particles = [];
+
+  function resizeParticles() {
+    pCanvas.width = window.innerWidth;
+    pCanvas.height = window.innerHeight;
+    createParticles();
+  }
+
+  function createParticles() {
+    particles = [];
+    const count = Math.floor((pCanvas.width * pCanvas.height) / 12000);
+    for (let i = 0; i < count; i++) {
+      particles.push({
+        x: Math.random() * pCanvas.width,
+        y: Math.random() * pCanvas.height,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        size: Math.random() * 1.5 + 0.5,
+        opacity: Math.random() * 0.6 + 0.2
+      });
+    }
+  }
+
+  function animateParticles() {
+    pCtx.clearRect(0, 0, pCanvas.width, pCanvas.height);
+    for (const p of particles) {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0) p.x = pCanvas.width;
+      if (p.x > pCanvas.width) p.x = 0;
+      if (p.y < 0) p.y = pCanvas.height;
+      if (p.y > pCanvas.height) p.y = 0;
+      pCtx.beginPath();
+      pCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      pCtx.fillStyle = `rgba(255,255,255,${p.opacity})`;
+      pCtx.fill();
+    }
+    requestAnimationFrame(animateParticles);
+  }
+
+  resizeParticles();
+  window.addEventListener('resize', resizeParticles);
+  animateParticles();
+
+  // ===================== FIXED CARDS =====================
+  const fixedCards = document.getElementById('fixed-cards');
+  const cardsGrid = fixedCards.querySelector('.grid');
+
+  function tickCards() {
+    const trigger = document.getElementById('cards-trigger');
+    const rect = trigger.getBoundingClientRect();
+    const triggerTop = rect.top + window.scrollY;
+    const triggerHeight = rect.height;
+    const scrollY = window.scrollY;
+    const vh = window.innerHeight;
+
+    const start = triggerTop - vh * 0.5;
+    const end = triggerTop + triggerHeight - vh * 0.3;
+    const range = end - start;
+
+    let progress = range > 0 ? (scrollY - start) / range : 0;
+    progress = Math.max(0, Math.min(1, progress));
+
+    // Numbers now APPEAR later — at the "steps" frame (block-1 ~0.38) — and stay
+    // well seen, fading out only as the doors open (~0.54).
+    const bp = getProgress();
+    const fadeIn = Math.min(1, Math.max(0, (bp - 0.38) / 0.04));
+    const fadeOut = Math.min(1, Math.max(0, (0.54 - bp) / 0.04));
+    const containerOpacity = Math.min(fadeIn, fadeOut);
+
+    fixedCards.style.opacity = containerOpacity;
+    fixedCards.style.pointerEvents = containerOpacity > 0.1 ? 'auto' : 'none';
+
+    const isMobile = window.innerWidth < 768;
+    const revealPct = Math.min(1, Math.max(0, (bp - 0.38) / 0.08)) * 130;
+    if (isMobile) {
+      cardsGrid.style.maskImage = `linear-gradient(to bottom, black ${revealPct}%, transparent ${revealPct + 20}%)`;
+      cardsGrid.style.webkitMaskImage = `linear-gradient(to bottom, black ${revealPct}%, transparent ${revealPct + 20}%)`;
+    } else {
+      cardsGrid.style.maskImage = `linear-gradient(to right, black ${revealPct}%, transparent ${revealPct + 15}%)`;
+      cardsGrid.style.webkitMaskImage = `linear-gradient(to right, black ${revealPct}%, transparent ${revealPct + 15}%)`;
+    }
+
+    requestAnimationFrame(tickCards);
+  }
+  requestAnimationFrame(tickCards);
+
+  // ===================== SECTION 3 INTERSECTION =====================
+  const sectionThreeInner = document.getElementById('section-three-inner');
+  if (sectionThreeInner) {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        sectionThreeInner.classList.add('visible');
+        observer.unobserve(sectionThreeInner);
+      }
+    }, { threshold: 0.15 });
+    observer.observe(sectionThreeInner);
+  }
+})();
+
+/* ===================== PART 2 — NEW scroll-video section (new video, begins after "Veldara 8") ===================== */
+(function() {
+  const container2 = document.getElementById('scroll-video-container-2');
+  const canvas = document.getElementById('video-canvas-2');
+  const videoEl = document.getElementById('video-fallback-2');
+  const ctx = canvas.getContext('2d');
+  let frames = [];
+  let framesReady = false;
+  let lastFrameIndex = -1;
+  let videoSeeking = false;
+
+  function resizeCanvas() {
+    const dpr = Math.min(devicePixelRatio, 2);
+    const rect = canvas.getBoundingClientRect();
+    const w = Math.round(rect.width * dpr);
+    const h = Math.round(rect.height * dpr);
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width = w;
+      canvas.height = h;
+    }
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    lastFrameIndex = -1;
+  }
+
+  function waitForEvent(el, ev, timeout) {
+    return new Promise((resolve, reject) => {
+      const on = () => { el.removeEventListener(ev, on); resolve(); };
+      el.addEventListener(ev, on);
+      if (timeout) setTimeout(() => { el.removeEventListener(ev, on); reject(); }, timeout);
+    });
+  }
+
+  async function extractFrames() {
+    try {
+      const video = document.createElement('video');
+      video.muted = true;
+      video.playsInline = true;
+      video.preload = 'auto';
+      video.src = videoEl.currentSrc || videoEl.src || 'background2.mp4';
+
+      if (video.readyState < 1) await waitForEvent(video, 'loadedmetadata', 20000);
+      if (!video.duration || !isFinite(video.duration)) throw new Error('no duration');
+
+      const scale = Math.min(1, 1280 / video.videoWidth);
+      const scaledWidth = Math.round(video.videoWidth * scale);
+      const scaledHeight = Math.round(video.videoHeight * scale);
+      // Capture every native frame (sources are 24 fps) at full resolution for
+      // perfectly smooth, sharp scrubbing — no missing frames, no duplicates.
+      const frameCount = Math.max(60, Math.min(260, Math.round(video.duration * 24)));
+
+      for (let i = 0; i < frameCount; i++) {
+        const time = (i / (frameCount - 1)) * (video.duration - 0.04);
+        video.currentTime = time;
+        await waitForEvent(video, 'seeked', 4000);
+        const bitmap = await createImageBitmap(video, { resizeWidth: scaledWidth, resizeHeight: scaledHeight });
+        frames.push(bitmap);
+      }
+
+      if (frames.length > 0) {
+        framesReady = true;
+        canvas.style.visibility = 'visible';
+        videoEl.style.display = 'none';
+      }
+    } catch (e) {
+      canvas.style.visibility = 'hidden';
+      videoEl.style.display = 'block';
+    }
+  }
+
+  function getScrollBounds() {
+    // Part 2 plays across its own section, which sits right after part 1.
+    const vh = window.innerHeight;
+    const content2 = document.getElementById('content2');
+    const top = content2.offsetTop;
+    // Part 2 plays from its first frame, revealed right as the dip-to-black lifts.
+    return { start: top, end: top + content2.offsetHeight - vh };
+  }
+
+  function getProgress() {
+    const { start, end } = getScrollBounds();
+    const range = end - start;
+    if (range <= 0) return 0;
+    return Math.max(0, Math.min(1, (window.scrollY - start) / range));
+  }
+
+  function drawFrame(frame) {
+    const cw = canvas.width, ch = canvas.height;
+    const s = Math.max(cw / frame.width, ch / frame.height);
+    const dw = frame.width * s, dh = frame.height * s;
+    ctx.drawImage(frame, (cw - dw) / 2, (ch - dh) / 2, dw, dh);
+  }
+
+  const content2El = document.getElementById('content2');
+  let displayP = -1; // eased progress for buttery scrubbing
+
+  function videoTick() {
+    const B = content2El.offsetTop;
+    // Clean hard cut at the boundary — no black, no ghosting. Part 1's video keeps
+    // moving right up to the cut, part 2's video takes over and keeps moving.
+    container2.style.opacity = window.scrollY >= B ? 1 : 0;
+
+    const target = getProgress();
+    if (displayP < 0) displayP = target;
+    else displayP += (target - displayP) * 0.2;
+    if (Math.abs(target - displayP) < 0.0004) displayP = target;
+    const progress = displayP;
+
+    if (framesReady && frames.length > 0) {
+      const idx = Math.round(progress * (frames.length - 1));
+      if (idx !== lastFrameIndex) {
+        lastFrameIndex = idx;
+        if (frames[idx]) drawFrame(frames[idx]);
+      }
+    } else if (videoEl.duration && isFinite(videoEl.duration) && videoEl.readyState >= 1) {
+      const t = progress * videoEl.duration;
+      if (!videoSeeking && Math.abs(videoEl.currentTime - t) > 0.001) {
+        videoSeeking = true;
+        videoEl.currentTime = t;
+      }
+    }
+    requestAnimationFrame(videoTick);
+  }
+
+  videoEl.addEventListener('seeked', () => { videoSeeking = false; });
+  videoEl.addEventListener('stalled', () => { videoSeeking = false; });
+  videoEl.addEventListener('loadeddata', () => { videoEl.currentTime = 0; });
+  canvas.style.visibility = 'hidden';
+
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+  requestAnimationFrame(videoTick);
+  extractFrames();
+
+  // ===================== FIXED CARDS (PART 2) =====================
+  const fixedCards = document.getElementById('fixed-cards-2');
+  const cardsGrid = fixedCards.querySelector('.grid');
+
+  function tickCards() {
+    const trigger = document.getElementById('cards-trigger-2');
+    const rect = trigger.getBoundingClientRect();
+    const triggerTop = rect.top + window.scrollY;
+    const triggerHeight = rect.height;
+    const scrollY = window.scrollY;
+    const vh = window.innerHeight;
+
+    const start = triggerTop - vh * 0.5;
+    const end = triggerTop + triggerHeight - vh * 0.3;
+    const range = end - start;
+
+    let progress = range > 0 ? (scrollY - start) / range : 0;
+    progress = Math.max(0, Math.min(1, progress));
+
+    const isActive = scrollY >= start - vh * 0.2 && scrollY <= end + vh * 0.3;
+    const fadeIn = Math.min(1, Math.max(0, (scrollY - (start - vh * 0.2)) / (vh * 0.2)));
+    const fadeOut = Math.min(1, Math.max(0, (end + vh * 0.3 - scrollY) / (vh * 0.3)));
+    const containerOpacity = isActive ? Math.min(fadeIn, fadeOut) : 0;
+
+    fixedCards.style.opacity = containerOpacity;
+    fixedCards.style.pointerEvents = containerOpacity > 0.1 ? 'auto' : 'none';
+
+    const isMobile = window.innerWidth < 768;
+    const revealPct = progress * 130;
+    if (isMobile) {
+      cardsGrid.style.maskImage = `linear-gradient(to bottom, black ${revealPct}%, transparent ${revealPct + 20}%)`;
+      cardsGrid.style.webkitMaskImage = `linear-gradient(to bottom, black ${revealPct}%, transparent ${revealPct + 20}%)`;
+    } else {
+      cardsGrid.style.maskImage = `linear-gradient(to right, black ${revealPct}%, transparent ${revealPct + 15}%)`;
+      cardsGrid.style.webkitMaskImage = `linear-gradient(to right, black ${revealPct}%, transparent ${revealPct + 15}%)`;
+    }
+
+    requestAnimationFrame(tickCards);
+  }
+  requestAnimationFrame(tickCards);
+
+  // ===================== SECTION 3 INTERSECTION (PART 2) =====================
+  const sectionThreeInner = document.getElementById('section-three-inner-2');
+  const observer = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      sectionThreeInner.classList.add('visible');
+      observer.unobserve(sectionThreeInner);
+    }
+  }, { threshold: 0.15 });
+  observer.observe(sectionThreeInner);
+})();
+
+/* ===================== SCROLL CUE — fade out once the user scrolls ===================== */
+(function() {
+  const cue = document.getElementById('scroll-cue');
+  if (!cue) return;
+  let disp = 1;
+  function raf() {
+    const y = window.scrollY;
+    const target = y < 30 ? 1 : Math.max(0, 1 - (y - 30) / 130);
+    disp += (target - disp) * 0.2;
+    cue.style.opacity = disp;
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+})();
+
+/* ===================== ABOUT US — title from the left (stays), then a left pair, then a right pair ===================== */
+(function() {
+  const overlay = document.getElementById('aboutus');
+  const trigger = document.getElementById('about-trigger');
+  const content1 = document.getElementById('content');
+  if (!overlay || !trigger || !content1) return;
+  const title = overlay.querySelector('.au-title');
+  const cards = Array.from(overlay.querySelectorAll('.au-card'));
+  if (!cards.length) return;
+
+  const clamp01 = v => Math.max(0, Math.min(1, v));
+  const lin = (a, b, p) => clamp01((p - a) / (b - a));
+  let disp = -1;
+
+  function frame() {
+    const vh = window.innerHeight;
+    const rect = trigger.getBoundingClientRect();
+    const span = trigger.offsetHeight - vh;
+    const target = span > 0 ? clamp01(-rect.top / span) : 0;
+    if (disp < 0) disp = target; else disp += (target - disp) * 0.1;
+    if (Math.abs(target - disp) < 0.0003) disp = target;
+    const p = disp;
+
+    // Hard gate: keep About hidden until the hero name has fully cleared (doors open).
+    const bend = content1.offsetTop + content1.offsetHeight - vh;
+    const heroGate = lin(0.50, 0.56, bend > 0 ? clamp01(window.scrollY / bend) : 0);
+    const vis = lin(0.0, 0.05, p) * (1 - lin(0.96, 1.0, p)) * heroGate;
+    overlay.style.opacity = vis;
+    overlay.style.visibility = vis > 0.002 ? 'visible' : 'hidden';
+
+    // Title slides in from the left early and STAYS for the whole section.
+    if (title) {
+      const tIn = lin(0.0, 0.08, p);
+      title.style.opacity = tIn;
+      title.style.transform = 'translateX(' + (-140 * (1 - tIn)) + 'px)';
+    }
+
+    // Pair A (cards 0,1) enter from the LEFT, hold, then leave to the left.
+    // Pair B (cards 2,3) enter from the RIGHT once A is gone. Centre stays clear.
+    cards.forEach((card, i) => {
+      const k = i % 2;                 // index within its pair (slight stagger)
+      const stag = k * 0.04;
+      let v, x;
+      if (i < 2) {                     // LEFT pair — enters early, HOLDS long, then leaves
+        const inA = lin(0.12 + stag, 0.22 + stag, p);
+        const outA = lin(0.48 + stag, 0.55 + stag, p);
+        v = inA * (1 - outA);
+        x = -160 * (1 - inA) - 160 * outA;   // in from left → out to the left
+      } else {                         // RIGHT pair — enters once A is gone, HOLDS long
+        const inB = lin(0.60 + stag, 0.70 + stag, p);
+        const outB = lin(0.95 + stag, 1.0, p);
+        v = inB * (1 - outB);
+        x = 160 * (1 - inB) + 160 * outB;    // in from right → out to the right
+      }
+      card.style.opacity = v;
+      card.style.transform = 'translate(' + x + 'px, -50%) scale(' + (0.97 + 0.03 * Math.min(1, v + 0.0)) + ')';
+      card.style.zIndex = String(10 + i);
+    });
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+/* ===================== CONTACT GLOBE — interactive canvas globe (Nice + FR/BE/CH) ===================== */
+(function() {
+  const canvas = document.getElementById('cf-globe');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const dotColor = 'rgba(255,255,255,ALPHA)';
+  const arcColor = 'rgba(200,215,255,0.5)';
+  const markerColor = 'rgba(226,196,142,1)';
+  const autoRotateSpeed = 0.0024;
+  const markers = [
+    { lat: 43.70, lng: 7.27,  label: 'Nice' },
+    { lat: 48.85, lng: 2.35,  label: 'Paris' },
+    { lat: 45.76, lng: 4.84,  label: 'Lyon' },
+    { lat: 43.30, lng: 5.37 },   // Marseille
+    { lat: 43.60, lng: 1.44 },   // Toulouse
+    { lat: 44.84, lng: -0.58 },  // Bordeaux
+    { lat: 47.22, lng: -1.55 },  // Nantes
+    { lat: 48.57, lng: 7.75 },   // Strasbourg
+    { lat: 50.63, lng: 3.06 },   // Lille
+    { lat: 43.61, lng: 3.88 },   // Montpellier
+    { lat: 48.11, lng: -1.68 },  // Rennes
+    { lat: 45.19, lng: 5.72 },   // Grenoble
+    { lat: 43.55, lng: 7.02 },   // Cannes
+    { lat: 43.53, lng: 5.45 },   // Aix-en-Provence
+    { lat: 45.90, lng: 6.13 },   // Annecy
+    { lat: 47.32, lng: 5.04 },   // Dijon
+    { lat: 49.44, lng: 1.10 },   // Rouen
+    { lat: 46.20, lng: 6.14,  label: 'Genève' },
+    { lat: 50.85, lng: 4.35,  label: 'Bruxelles' }
+  ];
+  const NICE = [43.70, 7.27];
+  const connections = markers.slice(1).map(m => ({ from: NICE, to: [m.lat, m.lng] }));
+  const cfEl = document.getElementById('contact-form');
+
+  const latLngToXYZ = (lat, lng, r) => {
+    const phi = ((90 - lat) * Math.PI) / 180, theta = ((lng + 180) * Math.PI) / 180;
+    return [-(r*Math.sin(phi)*Math.cos(theta)), r*Math.cos(phi), r*Math.sin(phi)*Math.sin(theta)];
+  };
+  const rotateY = (x,y,z,a) => { const c=Math.cos(a),s=Math.sin(a); return [x*c+z*s, y, -x*s+z*c]; };
+  const rotateX = (x,y,z,a) => { const c=Math.cos(a),s=Math.sin(a); return [x, y*c-z*s, y*s+z*c]; };
+  const project = (x,y,z,cx,cy,fov) => { const sc=fov/(fov+z); return [x*sc+cx, y*sc+cy, z]; };
+
+  const dots = [];
+  const N = 1100, gr = (1+Math.sqrt(5))/2;
+  for (let i=0;i<N;i++){ const th=2*Math.PI*i/gr, ph=Math.acos(1-2*(i+0.5)/N); dots.push([Math.cos(th)*Math.sin(ph), Math.cos(ph), Math.sin(th)*Math.sin(ph)]); }
+
+  let rotY = 1.5, rotX = 0.32, time = 0, animId = 0;
+  const drag = { active:false, sx:0, sy:0, ry:0, rx:0 };
+
+  function draw() {
+    const dpr = Math.min(window.devicePixelRatio||1, 2);
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    if (!w || !h) { animId = requestAnimationFrame(draw); return; }
+    // Pause the globe (its heaviest work) while the contact form is hidden — keeps the page fluid.
+    if (cfEl && parseFloat(getComputedStyle(cfEl).opacity) < 0.02) { animId = requestAnimationFrame(draw); return; }
+    if (canvas.width !== w*dpr || canvas.height !== h*dpr) { canvas.width=w*dpr; canvas.height=h*dpr; }
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    const cx=w/2, cy=h/2, radius=Math.min(w,h)*0.40, fov=600;
+    if (!drag.active) rotY += autoRotateSpeed;
+    time += 0.015;
+    ctx.clearRect(0,0,w,h);
+    ctx.beginPath(); ctx.arc(cx,cy,radius,0,Math.PI*2); ctx.strokeStyle='rgba(255,255,255,0.08)'; ctx.lineWidth=1; ctx.stroke();
+    const ry=rotY, rx=rotX;
+    for (let i=0;i<dots.length;i++){
+      let [x,y,z]=dots[i]; x*=radius; y*=radius; z*=radius;
+      [x,y,z]=rotateX(x,y,z,rx); [x,y,z]=rotateY(x,y,z,ry);
+      if (z>0) continue;
+      const [sx,sy]=project(x,y,z,cx,cy,fov);
+      const da=Math.max(0.1, 1-(z+radius)/(2*radius));
+      ctx.beginPath(); ctx.arc(sx,sy,1+da*0.8,0,Math.PI*2); ctx.fillStyle=dotColor.replace('ALPHA',(da*0.85).toFixed(2)); ctx.fill();
+    }
+    for (const conn of connections){
+      let [x1,y1,z1]=latLngToXYZ(conn.from[0],conn.from[1],radius);
+      let [x2,y2,z2]=latLngToXYZ(conn.to[0],conn.to[1],radius);
+      [x1,y1,z1]=rotateX(x1,y1,z1,rx); [x1,y1,z1]=rotateY(x1,y1,z1,ry);
+      [x2,y2,z2]=rotateX(x2,y2,z2,rx); [x2,y2,z2]=rotateY(x2,y2,z2,ry);
+      if (z1>radius*0.3 && z2>radius*0.3) continue;
+      const [sx1,sy1]=project(x1,y1,z1,cx,cy,fov);
+      const [sx2,sy2]=project(x2,y2,z2,cx,cy,fov);
+      const mx=(x1+x2)/2,my=(y1+y2)/2,mz=(z1+z2)/2, ml=Math.sqrt(mx*mx+my*my+mz*mz)||1, ah=radius*1.25;
+      const [scx,scy]=project(mx/ml*ah,my/ml*ah,mz/ml*ah,cx,cy,fov);
+      ctx.beginPath(); ctx.moveTo(sx1,sy1); ctx.quadraticCurveTo(scx,scy,sx2,sy2); ctx.strokeStyle=arcColor; ctx.lineWidth=1.1; ctx.stroke();
+      const t=(Math.sin(time*1.2+conn.from[0]*0.1)+1)/2;
+      const tx=(1-t)*(1-t)*sx1+2*(1-t)*t*scx+t*t*sx2, ty=(1-t)*(1-t)*sy1+2*(1-t)*t*scy+t*t*sy2;
+      ctx.beginPath(); ctx.arc(tx,ty,2,0,Math.PI*2); ctx.fillStyle=markerColor; ctx.fill();
+    }
+    for (const m of markers){
+      let [x,y,z]=latLngToXYZ(m.lat,m.lng,radius);
+      [x,y,z]=rotateX(x,y,z,rx); [x,y,z]=rotateY(x,y,z,ry);
+      if (z>radius*0.1) continue;
+      const [sx,sy]=project(x,y,z,cx,cy,fov);
+      const pulse=Math.sin(time*2+m.lat)*0.5+0.5;
+      ctx.beginPath(); ctx.arc(sx,sy,4+pulse*4,0,Math.PI*2); ctx.strokeStyle=markerColor.replace('1)', (0.2+pulse*0.15)+')'); ctx.lineWidth=1; ctx.stroke();
+      ctx.beginPath(); ctx.arc(sx,sy, m.label==='Nice'?3.4:2.3, 0, Math.PI*2); ctx.fillStyle=markerColor; ctx.fill();
+      if (m.label){ ctx.font='600 10px Barlow, system-ui, sans-serif'; ctx.fillStyle=markerColor.replace('1)','0.8)'); ctx.fillText(m.label, sx+8, sy+3); }
+    }
+    animId = requestAnimationFrame(draw);
+  }
+  animId = requestAnimationFrame(draw);
+
+  canvas.addEventListener('pointerdown', e => { drag.active=true; drag.sx=e.clientX; drag.sy=e.clientY; drag.ry=rotY; drag.rx=rotX; try{ canvas.setPointerCapture(e.pointerId); }catch(_){} });
+  canvas.addEventListener('pointermove', e => { if(!drag.active) return; rotY=drag.ry+(e.clientX-drag.sx)*0.005; rotX=Math.max(-1,Math.min(1,drag.rx+(e.clientY-drag.sy)*0.005)); });
+  canvas.addEventListener('pointerup', () => { drag.active=false; });
+  canvas.addEventListener('pointercancel', () => { drag.active=false; });
+})();
+
+/* ===================== CONTACT FORM — appears in block 2's scroll, clears before the reveal ===================== */
+(function() {
+  const overlay = document.getElementById('contact-form');
+  const content2 = document.getElementById('content2');
+  if (!overlay || !content2) return;
+  const card = overlay.querySelector('.cf-card');
+  const clamp01 = v => Math.max(0, Math.min(1, v));
+  const lin = (a, b, p) => clamp01((p - a) / (b - a));
+  let disp = -1;
+
+  function frame() {
+    const vh = window.innerHeight;
+    // Block-2 VIDEO progress (same mapping as the video itself) so the form is tied
+    // to the actual frame, not a guessed scroll spacer.
+    const denom = content2.offsetHeight - vh;
+    const target = denom > 0 ? clamp01((window.scrollY - content2.offsetTop) / denom) : 0;
+    if (disp < 0) disp = target; else disp += (target - disp) * 0.12;
+    if (Math.abs(target - disp) < 0.0003) disp = target;
+    const bp = disp;
+    // Begin exactly at the kitchen-island frame (~0.80) and clear before the reveal (~1.0).
+    const vis = lin(0.78, 0.82, bp) * (1 - lin(0.93, 0.96, bp));
+    overlay.style.opacity = vis;
+    overlay.style.visibility = vis > 0.002 ? 'visible' : 'hidden';
+    if (card) {
+      const y = (1 - lin(0.78, 0.84, bp)) * 40 - lin(0.93, 0.97, bp) * 26;
+      card.style.transform = 'translateY(' + y + 'px)';
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+/* ===================== TESTIMONIALS — carousel arrows, entrance, click-to-expand ===================== */
+(function() {
+  const section = document.getElementById('testimonials');
+  const track = document.getElementById('tm-track');
+  if (!section || !track) return;
+  const cards = Array.from(section.querySelectorAll('.tm-card'));
+
+  // Arrow navigation
+  section.querySelectorAll('.tm-arrow').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const dir = parseInt(btn.getAttribute('data-dir'), 10) || 1;
+      track.scrollBy({ left: dir * Math.min(track.clientWidth * 0.85, 360), behavior: 'smooth' });
+    });
+  });
+
+  // Staggered entrance when the section comes into view
+  cards.forEach((c, i) => { c.style.transitionDelay = (i * 0.05) + 's'; });
+  const io = new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) { section.classList.add('in'); io.unobserve(section); }
+  }, { threshold: 0.12 });
+  io.observe(section);
+
+  // Click a card to expand it
+  const modal = document.getElementById('tm-modal');
+  const modalCard = modal && modal.querySelector('.tm-modal-card');
+  cards.forEach(card => card.addEventListener('click', () => {
+    if (!modal || !modalCard) return;
+    modalCard.innerHTML = card.innerHTML;
+    modal.classList.add('open');
+  }));
+  if (modal) {
+    modal.addEventListener('click', () => modal.classList.remove('open'));
+    window.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); });
+  }
+})();
+
+/* ===================== EXPLORATIONS — parallax columns + lightbox (eased) ===================== */
+(function() {
+  const section = document.getElementById('explorations');
+  if (!section) return;
+  const colA = section.querySelector('[data-col="a"]');
+  const colB = section.querySelector('[data-col="b"]');
+  const cards = section.querySelectorAll('.exp-card');
+  const lb = document.getElementById('exp-lightbox');
+  const lbImg = lb && lb.querySelector('.exp-lightbox-img');
+  const clamp01 = v => Math.max(0, Math.min(1, v));
+  let disp = -1;
+
+  function frame() {
+    const rect = section.getBoundingClientRect();
+    const total = section.offsetHeight - window.innerHeight;
+    const target = total > 0 ? clamp01(-rect.top / total) : 0;
+    if (disp < 0) disp = target; else disp += (target - disp) * 0.12;
+    if (Math.abs(target - disp) < 0.0003) disp = target;
+    const p = disp;
+    // Columns drift up at different speeds — parallax.
+    if (colA) colA.style.transform = 'translateY(' + (-p * 220) + 'px)';
+    if (colB) colB.style.transform = 'translateY(' + (-p * 520) + 'px)';
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+
+  // Lightbox on click — shows the full photo
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const im = card.querySelector('img');
+      if (!lb || !lbImg || !im) return;
+      lbImg.src = im.src;
+      lb.classList.add('open');
+    });
+  });
+  if (lb) lb.addEventListener('click', () => lb.classList.remove('open'));
+  window.addEventListener('keydown', e => { if (e.key === 'Escape' && lb) lb.classList.remove('open'); });
+})();
+
+/* ===================== CATALOGUE intro — centred title, marries the scroll ===================== */
+(function() {
+  const overlay = document.getElementById('catalog-intro');
+  const trigger = document.getElementById('catalog-trigger');
+  if (!overlay || !trigger) return;
+  const title = overlay.querySelector('.cat-title');
+  const eyebrow = overlay.querySelector('.cat-eyebrow');
+  const clamp01 = v => Math.max(0, Math.min(1, v));
+  const lin = (a, b, p) => clamp01((p - a) / (b - a));
+  let disp = -1;
+
+  function frame() {
+    const vh = window.innerHeight;
+    const rect = trigger.getBoundingClientRect();
+    const span = trigger.offsetHeight - vh;
+    const target = span > 0 ? clamp01(-rect.top / span) : 0;
+    if (disp < 0) disp = target; else disp += (target - disp) * 0.1;
+    if (Math.abs(target - disp) < 0.0003) disp = target;
+    const p = disp;
+
+    // Appears right after the About cards, holds centred, fades before block 1 ends.
+    const vis = lin(0.0, 0.10, p) * (1 - lin(0.86, 1.0, p));
+    overlay.style.opacity = vis;
+    overlay.style.visibility = vis > 0.002 ? 'visible' : 'hidden';
+
+    // Marries the scroll: the title scales up gently and drifts upward as you move.
+    const sc = 0.92 + 0.16 * lin(0.0, 0.7, p);
+    const ty = (0.4 - p) * 60;
+    if (title) title.style.transform = 'translateY(' + ty + 'px) scale(' + sc + ')';
+    if (eyebrow) eyebrow.style.transform = 'translateY(' + (ty * 0.6) + 'px)';
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+/* ===================== PILLNAV — rising-circle hover (GSAP), logo spin, mobile menu ===================== */
+(function() {
+  if (!window.gsap) return;
+  const ease = 'power3.out';
+  const nav = document.querySelector('.pillnav');
+  if (!nav) return;
+
+  const pills = Array.from(nav.querySelectorAll('.pill'));
+  const circles = pills.map(p => p.querySelector('.hover-circle'));
+  const tls = [];
+  const active = [];
+
+  function layout() {
+    pills.forEach((pill, i) => {
+      const circle = circles[i];
+      if (!circle) return;
+      const rect = pill.getBoundingClientRect();
+      const w = rect.width, h = rect.height;
+      if (!w || !h) return;
+      const R = ((w * w) / 4 + h * h) / (2 * h);
+      const D = Math.ceil(2 * R) + 2;
+      const delta = Math.ceil(R - Math.sqrt(Math.max(0, R * R - (w * w) / 4))) + 1;
+      const originY = D - delta;
+      circle.style.width = D + 'px';
+      circle.style.height = D + 'px';
+      circle.style.bottom = (-delta) + 'px';
+      gsap.set(circle, { xPercent: -50, scale: 0, transformOrigin: `50% ${originY}px` });
+      const label = pill.querySelector('.pill-label');
+      const white = pill.querySelector('.pill-label-hover');
+      if (label) gsap.set(label, { y: 0 });
+      if (white) gsap.set(white, { y: Math.ceil(h + 20), opacity: 0 });
+      tls[i] && tls[i].kill();
+      const tl = gsap.timeline({ paused: true });
+      tl.to(circle, { scale: 1.2, xPercent: -50, duration: 0.8, ease, overwrite: 'auto' }, 0);
+      if (label) tl.to(label, { y: -(h + 8), duration: 0.6, ease, overwrite: 'auto' }, 0);
+      if (white) tl.to(white, { y: 0, opacity: 1, duration: 0.6, ease, overwrite: 'auto' }, 0);
+      tls[i] = tl;
+    });
+  }
+  const enter = i => { const tl = tls[i]; if (!tl) return; active[i] && active[i].kill(); active[i] = tl.tweenTo(tl.duration(), { duration: 0.4, ease, overwrite: 'auto' }); };
+  const leave = i => { const tl = tls[i]; if (!tl) return; active[i] && active[i].kill(); active[i] = tl.tweenTo(0, { duration: 0.3, ease, overwrite: 'auto' }); };
+  pills.forEach((pill, i) => {
+    pill.addEventListener('mouseenter', () => enter(i));
+    pill.addEventListener('mouseleave', () => leave(i));
+    pill.addEventListener('focus', () => enter(i));
+    pill.addEventListener('blur', () => leave(i));
+  });
+
+  layout();
+  window.addEventListener('resize', layout);
+  if (document.fonts) document.fonts.ready.then(layout).catch(() => {});
+
+  // Logo spin on hover
+  const logo = nav.querySelector('.pillnav-logo');
+  const logoSvg = logo && logo.querySelector('svg');
+  let logoTween;
+  if (logo && logoSvg) {
+    logo.addEventListener('mouseenter', () => {
+      logoTween && logoTween.kill();
+      logoTween = gsap.to(logoSvg, { rotate: 360, duration: 0.8, ease: 'elastic.out(1,0.5)', overwrite: 'auto', onComplete: () => gsap.set(logoSvg, { rotate: 0 }) });
+    });
+  }
+
+  // Entrance animation
+  if (logo) { gsap.set(logo, { scale: 0, opacity: 0 }); gsap.to(logo, { scale: 1, opacity: 1, duration: 0.8, ease: 'back.out(1.7)' }); }
+  const lis = nav.querySelectorAll('.pillnav-pills li');
+  gsap.set(lis, { opacity: 0, x: -20 });
+  gsap.to(lis, { opacity: 1, x: 0, duration: 0.6, stagger: 0.05, ease: 'power2.out', delay: 0.2 });
+
+  // Mobile menu
+  const burger = nav.querySelector('.pillnav-burger');
+  const menu = document.getElementById('pillnav-mobile');
+  const ICON_MENU = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+  const ICON_X = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
+  let open = false;
+  function setMenu(state) {
+    open = state;
+    if (burger) { burger.innerHTML = open ? ICON_X : ICON_MENU; burger.setAttribute('aria-expanded', String(open)); }
+    if (!menu) return;
+    if (open) { gsap.set(menu, { display: 'block', opacity: 0, y: -20 }); gsap.to(menu, { opacity: 1, y: 0, duration: 0.4, ease: 'power3.out' }); }
+    else { gsap.to(menu, { opacity: 0, y: -20, duration: 0.3, ease: 'power3.in', onComplete: () => gsap.set(menu, { display: 'none' }) }); }
+  }
+  if (burger) burger.addEventListener('click', () => setMenu(!open));
+  if (menu) menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+})();
+
+/* ===================== SMOOTH SCROLL (Lenis) — buttery scrolling across the whole site ===================== */
+(function() {
+  if (!window.Lenis) return;
+  const lenis = new Lenis({
+    lerp: 0.085,          // lower = smoother / more glide
+    wheelMultiplier: 1,
+    smoothWheel: true,
+    syncTouch: true
+  });
+  function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+  requestAnimationFrame(raf);
+
+  // Nav + buttons → smooth-scroll to the matching section.
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (!id || id.length < 2) return;
+      // Contact → kitchen frame (block-2 ~0.80); Services → fireplace frame (~0.31).
+      if (id === '#contact' || id === '#go-services') {
+        const c2 = document.getElementById('content2');
+        if (!c2) return;
+        e.preventDefault();
+        const frac = id === '#contact' ? 0.80 : 0.31;
+        lenis.scrollTo(c2.offsetTop + frac * (c2.offsetHeight - window.innerHeight), { duration: 1.6 });
+        return;
+      }
+      const el = document.querySelector(id);
+      if (!el) return;                 // no matching section → leave as-is
+      e.preventDefault();
+      lenis.scrollTo(el, { offset: 0, duration: 1.5 });
+    });
+  });
+})();
+
+</script>
+</body>
+</html>
