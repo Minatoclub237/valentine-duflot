@@ -1217,7 +1217,26 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
   requestAnimationFrame(videoTick);
-  extractFrames();
+  if (smallScreen) {
+    // Phones: scrub the real <video> element. Decoding ~200 frames via canvas is
+    // unreliable on mobile (shows black), so we seek currentTime instead. iOS only
+    // renders seeked frames after the muted video has been "primed" with a play().
+    videoEl.style.display = 'block';
+    canvas.style.visibility = 'hidden';
+    videoEl.muted = true;
+    videoEl.setAttribute('playsinline', '');
+    let primed = false;
+    const prime = () => {
+      if (primed) return;
+      const p = videoEl.play();
+      if (p && p.then) p.then(() => { primed = true; videoEl.pause(); }).catch(() => {});
+      else { primed = true; try { videoEl.pause(); } catch (_) {} }
+    };
+    prime();
+    ['touchstart', 'pointerdown', 'scroll'].forEach(ev => window.addEventListener(ev, prime, { passive: true }));
+  } else {
+    extractFrames();
+  }
 
   // ===================== PARTICLES (shared) =====================
   const pCanvas = document.getElementById('particles-canvas');
@@ -1461,7 +1480,26 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
   requestAnimationFrame(videoTick);
-  extractFrames();
+  if (smallScreen) {
+    // Phones: scrub the real <video> element. Decoding ~200 frames via canvas is
+    // unreliable on mobile (shows black), so we seek currentTime instead. iOS only
+    // renders seeked frames after the muted video has been "primed" with a play().
+    videoEl.style.display = 'block';
+    canvas.style.visibility = 'hidden';
+    videoEl.muted = true;
+    videoEl.setAttribute('playsinline', '');
+    let primed = false;
+    const prime = () => {
+      if (primed) return;
+      const p = videoEl.play();
+      if (p && p.then) p.then(() => { primed = true; videoEl.pause(); }).catch(() => {});
+      else { primed = true; try { videoEl.pause(); } catch (_) {} }
+    };
+    prime();
+    ['touchstart', 'pointerdown', 'scroll'].forEach(ev => window.addEventListener(ev, prime, { passive: true }));
+  } else {
+    extractFrames();
+  }
 
   // ===================== FIXED CARDS (PART 2) =====================
   const fixedCards = document.getElementById('fixed-cards-2');
