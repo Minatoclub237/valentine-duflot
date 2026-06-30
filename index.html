@@ -126,8 +126,8 @@ nav .social svg { width: 1.25rem; height: 1.25rem; }
   flex-direction: row; gap: 2.25rem; align-items: flex-end; justify-content: flex-end;
   padding: 1.6rem 2rem;
   background: rgba(255,255,255,0.10);
-  backdrop-filter: blur(18px) saturate(150%);
-  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  backdrop-filter: blur(11px) saturate(140%);
+  -webkit-backdrop-filter: blur(11px) saturate(140%);
   border: 1px solid rgba(255,255,255,0.25);
   border-radius: 1.25rem;
   box-shadow: 0 12px 50px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.30);
@@ -1050,7 +1050,7 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
   let videoSeeking = false;
 
   function resizeCanvas() {
-    const dpr = Math.min(devicePixelRatio, 2);
+    const dpr = Math.min(devicePixelRatio, 1.25);
     const rect = canvas.getBoundingClientRect();
     const w = Math.round(rect.width * dpr);
     const h = Math.round(rect.height * dpr);
@@ -1228,7 +1228,7 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
 
   function createParticles() {
     particles = [];
-    const count = Math.floor((pCanvas.width * pCanvas.height) / 12000);
+    const count = Math.min(110, Math.floor((pCanvas.width * pCanvas.height) / 26000));
     for (let i = 0; i < count; i++) {
       particles.push({
         x: Math.random() * pCanvas.width,
@@ -1290,14 +1290,18 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
     fixedCards.style.opacity = containerOpacity;
     fixedCards.style.pointerEvents = containerOpacity > 0.1 ? 'auto' : 'none';
 
-    const isMobile = window.innerWidth < 768;
-    const revealPct = Math.min(1, Math.max(0, (bp - 0.38) / 0.08)) * 130;
-    if (isMobile) {
-      cardsGrid.style.maskImage = `linear-gradient(to bottom, black ${revealPct}%, transparent ${revealPct + 20}%)`;
-      cardsGrid.style.webkitMaskImage = `linear-gradient(to bottom, black ${revealPct}%, transparent ${revealPct + 20}%)`;
-    } else {
-      cardsGrid.style.maskImage = `linear-gradient(to right, black ${revealPct}%, transparent ${revealPct + 15}%)`;
-      cardsGrid.style.webkitMaskImage = `linear-gradient(to right, black ${revealPct}%, transparent ${revealPct + 15}%)`;
+    // Only rewrite the (paint-heavy) mask while the deck is actually on screen and the
+    // reveal is still animating — not every frame for the whole page.
+    if (containerOpacity > 0.01) {
+      const isMobile = window.innerWidth < 768;
+      const revealPct = Math.min(1, Math.max(0, (bp - 0.38) / 0.08)) * 130;
+      if (isMobile) {
+        cardsGrid.style.maskImage = `linear-gradient(to bottom, black ${revealPct}%, transparent ${revealPct + 20}%)`;
+        cardsGrid.style.webkitMaskImage = `linear-gradient(to bottom, black ${revealPct}%, transparent ${revealPct + 20}%)`;
+      } else {
+        cardsGrid.style.maskImage = `linear-gradient(to right, black ${revealPct}%, transparent ${revealPct + 15}%)`;
+        cardsGrid.style.webkitMaskImage = `linear-gradient(to right, black ${revealPct}%, transparent ${revealPct + 15}%)`;
+      }
     }
 
     requestAnimationFrame(tickCards);
@@ -1329,7 +1333,7 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
   let videoSeeking = false;
 
   function resizeCanvas() {
-    const dpr = Math.min(devicePixelRatio, 2);
+    const dpr = Math.min(devicePixelRatio, 1.25);
     const rect = canvas.getBoundingClientRect();
     const w = Math.round(rect.width * dpr);
     const h = Math.round(rect.height * dpr);
@@ -1490,7 +1494,8 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
 
     requestAnimationFrame(tickCards);
   }
-  requestAnimationFrame(tickCards);
+  // Block 2's deck is hidden — only run this loop if it's ever shown (saves a whole rAF + layout read per frame).
+  if (fixedCards && getComputedStyle(fixedCards).display !== 'none') requestAnimationFrame(tickCards);
 
   // ===================== SECTION 3 INTERSECTION (PART 2) =====================
   const sectionThreeInner = document.getElementById('section-three-inner-2');
@@ -1535,6 +1540,11 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
   function frame() {
     const vh = window.innerHeight;
     const rect = trigger.getBoundingClientRect();
+    // Off-screen → keep it hidden and skip all the card work.
+    if (rect.bottom < -vh * 0.5 || rect.top > vh * 1.5) {
+      if (overlay.style.visibility !== 'hidden') { overlay.style.opacity = 0; overlay.style.visibility = 'hidden'; }
+      requestAnimationFrame(frame); return;
+    }
     const span = trigger.offsetHeight - vh;
     const target = span > 0 ? clamp01(-rect.top / span) : 0;
     if (disp < 0) disp = target; else disp += (target - disp) * 0.1;
@@ -1636,7 +1646,8 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
     const w = canvas.clientWidth, h = canvas.clientHeight;
     if (!w || !h) { animId = requestAnimationFrame(draw); return; }
     // Pause the globe (its heaviest work) while the contact form is hidden — keeps the page fluid.
-    if (cfEl && parseFloat(getComputedStyle(cfEl).opacity) < 0.02) { animId = requestAnimationFrame(draw); return; }
+    // Read the inline opacity (set by the contact controller) — no forced style flush.
+    if (cfEl && parseFloat(cfEl.style.opacity || '0') < 0.02) { animId = requestAnimationFrame(draw); return; }
     if (canvas.width !== w*dpr || canvas.height !== h*dpr) { canvas.width=w*dpr; canvas.height=h*dpr; }
     ctx.setTransform(dpr,0,0,dpr,0,0);
     const cx=w/2, cy=h/2, radius=Math.min(w,h)*0.40, fov=600;
@@ -1770,7 +1781,10 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
 
   function frame() {
     const rect = section.getBoundingClientRect();
-    const total = section.offsetHeight - window.innerHeight;
+    const vh = window.innerHeight;
+    // Off-screen → skip the parallax writes entirely.
+    if (rect.bottom < 0 || rect.top > vh) { requestAnimationFrame(frame); return; }
+    const total = section.offsetHeight - vh;
     const target = total > 0 ? clamp01(-rect.top / total) : 0;
     if (disp < 0) disp = target; else disp += (target - disp) * 0.12;
     if (Math.abs(target - disp) < 0.0003) disp = target;
