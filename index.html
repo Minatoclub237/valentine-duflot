@@ -642,16 +642,30 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
   box-shadow: 0 12px 34px rgba(0,0,0,0.32); transition: transform .2s ease, background .2s ease;
 }
 .cf-submit:hover { transform: translateY(-2px); background: rgba(255,255,255,0.88); }
+/* Keep the card fully transparent (like the other glass sections) but make every
+   letter legible with a crisp tight outline-shadow that reads on any background. */
+#contact-form .cf-eyebrow,
+#contact-form .cf-title,
+#contact-form .cf-lead,
+#contact-form .cf-d-label,
+#contact-form .cf-d-value,
+#contact-form .cf-field > span,
+#contact-form .cf-field input,
+#contact-form .cf-field textarea,
+#contact-form .cf-loc-city,
+#contact-form .cf-loc-addr {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.95), 0 2px 10px rgba(0,0,0,0.7);
+}
+#contact-form .cf-field input::placeholder,
+#contact-form .cf-field textarea::placeholder {
+  color: rgba(255,255,255,0.88); text-shadow: 0 1px 2px rgba(0,0,0,0.92);
+}
+#contact-form .cf-field input, #contact-form .cf-field textarea { border-bottom-color: rgba(255,255,255,0.65); }
 @media (max-width: 760px) {
   #contact-form { padding: 5.5rem 1rem 2rem; align-items: center; }
-  /* On phones the transparent glass over the bright video is unreadable — give the
-     card a dark frosted backdrop so every field is clearly legible. */
-  #contact-form .cf-card {
-    padding: 1.8rem 1.4rem;
-    background: linear-gradient(180deg, rgba(12,12,16,0.66), rgba(12,12,16,0.78));
-    backdrop-filter: blur(18px) saturate(140%); -webkit-backdrop-filter: blur(18px) saturate(140%);
-    box-shadow: 0 40px 90px rgba(0,0,0,0.5);
-  }
+  /* Transparent glass like the other sections; legibility comes from the tight
+     text-shadows above, not from a dark frosted panel. */
+  #contact-form .cf-card { padding: 1.8rem 1.4rem; }
   .cf-grid { grid-template-columns: 1fr; gap: 1.2rem; }
   .cf-lead { display: none; }            /* save vertical space on phones */
   .cf-globe-wrap { display: none; }      /* decorative globe — hide on phones */
