@@ -643,10 +643,23 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
 }
 .cf-submit:hover { transform: translateY(-2px); background: rgba(255,255,255,0.88); }
 @media (max-width: 760px) {
-  #contact-form { padding-top: 6rem; }
-  #contact-form .cf-card { padding: 2rem 1.6rem; }
-  .cf-grid { grid-template-columns: 1fr; gap: 1.8rem; }
-  .cf-lead { margin-bottom: 1.4rem; }
+  #contact-form { padding: 5.5rem 1rem 2rem; align-items: center; }
+  /* On phones the transparent glass over the bright video is unreadable — give the
+     card a dark frosted backdrop so every field is clearly legible. */
+  #contact-form .cf-card {
+    padding: 1.8rem 1.4rem;
+    background: linear-gradient(180deg, rgba(12,12,16,0.66), rgba(12,12,16,0.78));
+    backdrop-filter: blur(18px) saturate(140%); -webkit-backdrop-filter: blur(18px) saturate(140%);
+    box-shadow: 0 40px 90px rgba(0,0,0,0.5);
+  }
+  .cf-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+  .cf-lead { display: none; }            /* save vertical space on phones */
+  .cf-globe-wrap { display: none; }      /* decorative globe — hide on phones */
+  .cf-right { gap: 0.6rem; align-items: flex-start; }
+  .cf-loc { text-align: left; }
+  .cf-form { gap: 0.95rem; }
+  .cf-field textarea { min-height: 48px; }
+  .cf-title { font-size: 2rem; }
 }
 
 /* ===================== FOOTER ===================== */
