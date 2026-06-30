@@ -1089,12 +1089,15 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
       if (video.readyState < 1) await waitForEvent(video, 'loadedmetadata', 20000);
       if (!video.duration || !isFinite(video.duration)) throw new Error('no duration');
 
-      const scale = Math.min(1, 1280 / video.videoWidth);
+      // Phones get fewer + smaller frames so scroll-scrubbing stays feasible (slightly
+      // softer, but it works); desktop keeps full resolution and frame count.
+      const maxW = smallScreen ? 640 : 1280;
+      const scale = Math.min(1, maxW / video.videoWidth);
       const scaledWidth = Math.round(video.videoWidth * scale);
       const scaledHeight = Math.round(video.videoHeight * scale);
-      // Capture every native frame (sources are 24 fps) at full resolution for
-      // perfectly smooth, sharp scrubbing — no missing frames, no duplicates.
-      const frameCount = Math.max(60, Math.min(260, Math.round(video.duration * 24)));
+      const frameCount = smallScreen
+        ? Math.max(30, Math.min(56, Math.round(video.duration * 6)))
+        : Math.max(60, Math.min(260, Math.round(video.duration * 24)));
 
       for (let i = 0; i < frameCount; i++) {
         const time = (i / (frameCount - 1)) * (video.duration - 0.04);
@@ -1196,7 +1199,7 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
         lastFrameIndex = idx;
         if (frames[idx]) drawFrame(frames[idx]);
       }
-    } else if (!smallScreen && videoEl.duration && isFinite(videoEl.duration) && videoEl.readyState >= 1) {
+    } else if (videoEl.duration && isFinite(videoEl.duration) && videoEl.readyState >= 1) {
       const t = progress * videoEl.duration;
       if (!videoSeeking && Math.abs(videoEl.currentTime - t) > 0.001) {
         videoSeeking = true;
@@ -1214,17 +1217,7 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
   requestAnimationFrame(videoTick);
-  // On phones, scrubbing ~200 decoded frames is too heavy and shows a black screen —
-  // fall back to a simple autoplaying, looped, muted background video.
-  if (smallScreen) {
-    videoEl.loop = false; videoEl.autoplay = true; videoEl.muted = true;
-    videoEl.setAttribute('playsinline', '');
-    videoEl.style.display = 'block';
-    canvas.style.visibility = 'hidden';
-    const pr = videoEl.play(); if (pr && pr.catch) pr.catch(() => {});
-  } else {
-    extractFrames();
-  }
+  extractFrames();
 
   // ===================== PARTICLES (shared) =====================
   const pCanvas = document.getElementById('particles-canvas');
@@ -1376,12 +1369,15 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
       if (video.readyState < 1) await waitForEvent(video, 'loadedmetadata', 20000);
       if (!video.duration || !isFinite(video.duration)) throw new Error('no duration');
 
-      const scale = Math.min(1, 1280 / video.videoWidth);
+      // Phones get fewer + smaller frames so scroll-scrubbing stays feasible (slightly
+      // softer, but it works); desktop keeps full resolution and frame count.
+      const maxW = smallScreen ? 640 : 1280;
+      const scale = Math.min(1, maxW / video.videoWidth);
       const scaledWidth = Math.round(video.videoWidth * scale);
       const scaledHeight = Math.round(video.videoHeight * scale);
-      // Capture every native frame (sources are 24 fps) at full resolution for
-      // perfectly smooth, sharp scrubbing — no missing frames, no duplicates.
-      const frameCount = Math.max(60, Math.min(260, Math.round(video.duration * 24)));
+      const frameCount = smallScreen
+        ? Math.max(30, Math.min(56, Math.round(video.duration * 6)))
+        : Math.max(60, Math.min(260, Math.round(video.duration * 24)));
 
       for (let i = 0; i < frameCount; i++) {
         const time = (i / (frameCount - 1)) * (video.duration - 0.04);
@@ -1434,8 +1430,6 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
     // Clean hard cut at the boundary — no black, no ghosting. Part 1's video keeps
     // moving right up to the cut, part 2's video takes over and keeps moving.
     container2.style.opacity = window.scrollY >= B ? 1 : 0;
-    // Phones: make sure block-2's looped video is actually playing once it's reached.
-    if (smallScreen && window.scrollY >= B && videoEl.paused) { const pr = videoEl.play(); if (pr && pr.catch) pr.catch(() => {}); }
 
     const target = getProgress();
     if (displayP < 0) displayP = target;
@@ -1449,7 +1443,7 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
         lastFrameIndex = idx;
         if (frames[idx]) drawFrame(frames[idx]);
       }
-    } else if (!smallScreen && videoEl.duration && isFinite(videoEl.duration) && videoEl.readyState >= 1) {
+    } else if (videoEl.duration && isFinite(videoEl.duration) && videoEl.readyState >= 1) {
       const t = progress * videoEl.duration;
       if (!videoSeeking && Math.abs(videoEl.currentTime - t) > 0.001) {
         videoSeeking = true;
@@ -1467,17 +1461,7 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
   requestAnimationFrame(videoTick);
-  // On phones, scrubbing ~200 decoded frames is too heavy and shows a black screen —
-  // fall back to a simple autoplaying, looped, muted background video.
-  if (smallScreen) {
-    videoEl.loop = false; videoEl.autoplay = true; videoEl.muted = true;
-    videoEl.setAttribute('playsinline', '');
-    videoEl.style.display = 'block';
-    canvas.style.visibility = 'hidden';
-    const pr = videoEl.play(); if (pr && pr.catch) pr.catch(() => {});
-  } else {
-    extractFrames();
-  }
+  extractFrames();
 
   // ===================== FIXED CARDS (PART 2) =====================
   const fixedCards = document.getElementById('fixed-cards-2');
