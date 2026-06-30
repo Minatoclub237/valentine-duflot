@@ -1217,7 +1217,7 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
   // On phones, scrubbing ~200 decoded frames is too heavy and shows a black screen —
   // fall back to a simple autoplaying, looped, muted background video.
   if (smallScreen) {
-    videoEl.loop = true; videoEl.autoplay = true; videoEl.muted = true;
+    videoEl.loop = false; videoEl.autoplay = true; videoEl.muted = true;
     videoEl.setAttribute('playsinline', '');
     videoEl.style.display = 'block';
     canvas.style.visibility = 'hidden';
@@ -1470,7 +1470,7 @@ a.cf-d-value:hover { color: rgba(255,255,255,0.78); }
   // On phones, scrubbing ~200 decoded frames is too heavy and shows a black screen —
   // fall back to a simple autoplaying, looped, muted background video.
   if (smallScreen) {
-    videoEl.loop = true; videoEl.autoplay = true; videoEl.muted = true;
+    videoEl.loop = false; videoEl.autoplay = true; videoEl.muted = true;
     videoEl.setAttribute('playsinline', '');
     videoEl.style.display = 'block';
     canvas.style.visibility = 'hidden';
